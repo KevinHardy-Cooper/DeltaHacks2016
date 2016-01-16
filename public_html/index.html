@@ -41,7 +41,6 @@
 </head>
 
 <body id="page-top">
-
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -52,7 +51,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">TentativeTitle</a>
+                <a id="logo" class="navbar-brand page-scroll" href="#page-top">LOGO</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -60,33 +59,38 @@
                 <ul class="nav navbar-nav navbar-right">
                    
                     <li>
-                        <a class="page-scroll" href="#">Sign Up</a><!--TODO-->
+                        <a id="webname" class="page-scroll" href="#page-top">WebsiteName</a><!--TODO-->
                     </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
+
         <!-- /.container-fluid -->
+         <button id="signUpButton" type="button" class="btn btn-default" href="sign-up.html">Sign Up</button>
     </nav>
 
     <header>
+                       
         <div class="header-content">
+           
+
             <div class="header-content-inner">
                 <h1>WebsiteName</h1>
                 <hr>
                 <p>CatchyCaption!</p>
                 <div class="container">
                   <form role="form">
-                    <div class="form-group">
+                    <div class="input-group input-group-lg">
                       <input type="text" class="form-control" id="username" placeholder="Username or Email">
                     </div>
-                    <div class="form-group">
+                    <div class="input-group input-group-lg">
                       <input type="password" class="form-control" id="password" placeholder="Password">
                     </div>
                   </form>
                 </div>
 
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Sign In</a>
+                <a id="signInButton" href="#signin" class="btn btn-primary btn-xl page-scroll">Sign In</a>
             </div>
         </div>
     </header>
@@ -105,6 +109,26 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
 
+<script>
+$("#signInButton").click(function() {
+        //get login attempt info
+        //pass to php function to verify exists in JSON
+        var username = $("#username").val();
+        var password = $("#password").val();
+        boolean email;
+        $.ajax({
+            method: 'get',
+            url: 'php/verify.php',
+            data: {
+                'username': username,
+                'password': password
+            },
+            success: function(msg) {
+                //TODO set received token? Go to home.php
+            }
+        });
+    });
+</script>
 </body>
 
 </html>
