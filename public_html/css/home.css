@@ -6,9 +6,9 @@ div { width: 50%; float: left;  }
 height: 49%; }
 #listen { background-color: rgba(155, 205, 215, 0.7);
 height: 49%; }
-#community { background-color: rgba(208, 231, 170, 0.7);
+#settings { background-color: rgba(208, 231, 170, 0.7);
 height: 49%; }
-#settings { background-color: rgba(180, 180, 208, 0.7);
+#community { background-color: rgba(180, 180, 208, 0.7);
 height:49%; }
 
 .navbar-default {
@@ -124,26 +124,30 @@ height:49%; }
 	color: #7987B6;
 }
 
-#communityIcon{
-	color: #3E804F;
-}
-
-#communityCaption{
-	color: #3E804F;
-}
-#communityIcon:hover{
-	color: #61986F;
-}
-
 #settingsIcon{
-	color: #6F5A8C;
+	color: #3E804F;
 }
 
 #settingsCaption{
-	color: #6F5A8C;
+	color: #3E804F;
 }
 #settingsIcon:hover{
+	color: #61986F;
+}
+
+#communityIcon{
+	color: #6F5A8C;
+}
+
+#communityCaption{
+	color: #6F5A8C;
+}
+#communityIcon:hover{
 	color: #9080A5;
+}
+
+.big-icon{
+    font-size:200px;
 }
 
 @media(min-width:768px) {
@@ -255,47 +259,47 @@ height:49%; }
 }
 
 #talkIcon{
-	color: #729531;
+    color: #729531;
 }
 
 #talkCaption{
-	color: #729531;
+    color: #729531;
 }
 #talkIcon:hover{
-	color: #97B658;
+    color: #97B658;
 }
 
 #listenIcon{
-	color: #506197;
+    color: #506197;
 }
 
 #listenCaption{
-	color: #506197;
+    color: #506197;
 }
 #listenIcon:hover{
-	color: #7987B6;
-}
-
-#communityIcon{
-	color: #3E804F;
-}
-
-#communityCaption{
-	color: #3E804F;
-}
-#communityIcon:hover{
-	color: #61986F;
+    color: #7987B6;
 }
 
 #settingsIcon{
-	color: #6F5A8C;
+    color: #3E804F;
 }
 
 #settingsCaption{
-	color: #6F5A8C;
+    color: #3E804F;
 }
 #settingsIcon:hover{
-	color: #9080A5;
+    color: #61986F;
+}
+
+#communityIcon{
+    color: #6F5A8C;
+}
+
+#communityCaption{
+    color: #6F5A8C;
+}
+#communityIcon:hover{
+    color: #9080A5;
 }
 }
 
