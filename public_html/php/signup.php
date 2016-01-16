@@ -93,6 +93,14 @@ $(#signUpButton).click(function (){
 	$aReg = $_GET['aReg'];
 	$aCou = $_GET['aCou'];
 	$signUpAch = $_GET['signUpAch'];
+	$gender = $_GET['gender'];
+
+	$personInsertCmd = "INSERT INTO `2035081_letstalk`.`Person` VALUES (`" . $email . "`, `" . $fName . "`, `" . $lName . "`, `" . $password . 
+		"`, `" . $usernamePieces[0]. "`, `" . $usernamePieces[1] . "`, `" . $gender . "`, `" . $signUpAch . "`, `" . $aCod . "`, `" . $aStr .
+		"`, `" . $aNum . "`, `" . $aCit . "`, `" . $aReg . "`, `" . $aCou . "`)";
+
+	$listenerInsertCmd = "INSERT INTO `2035081_letstalk`.`Listener` VALUES (`" . $email . "`, `" . $solver . "`, `" . $listenExp . "`, `" .
+		$personalExp . "`, `" . $bluntness . "`);";
 
 	$con = mysqli_connect("localhost:8889","root","root","mysql");
 
@@ -100,8 +108,6 @@ $(#signUpButton).click(function (){
 	if (mysqli_connect_errno()) {
   		echo "Fail";
   	}
-
-  	$sql = "INSERT INTO `Person` (`Username`, `Password`) VALUES ('". $username ."', '". crypt($password) ."');";
 	$result = mysqli_query($con, $sql);
 
 
