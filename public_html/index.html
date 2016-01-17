@@ -108,7 +108,6 @@ $("#signInButton").click(function() {
         //pass to php function to verify exists in JSON
         var username = $("#username").val();
         var password = $("#password").val();
-        boolean email;
         $.ajax({
             method: 'get',
             url: 'php/verify.php',
@@ -117,7 +116,7 @@ $("#signInButton").click(function() {
                 'password': password
             },
             success: function(msg) {
-                //TODO set received token? Go to home.php
+                alert(msg);
             }
         });
     });
