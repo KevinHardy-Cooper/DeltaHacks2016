@@ -7,6 +7,7 @@ body {
 
 body {
     font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    overflow: hidden;
 }
 
 hr {
@@ -151,24 +152,6 @@ header .header-content .header-content-inner p {
     transition: all .35s;
 }
 
-#endConvoButton{
-    position: absolute;
-    top: 10%;
-    right: 10%;
-}
-
-#flagButton{
-    position: absolute;
-    bottom: 10%;
-    left: 10%;
-}
-#sendButton{
-    position: absolute;
-    bottom: 10%;
-    left: 30%;
-    width: 10vw;
-    height: 10vw;
-}
 @media(min-width:768px) {
     .navbar-default {
         border-color: rgba(9,79,106,.7);
@@ -184,12 +167,8 @@ header .header-content .header-content-inner p {
     }
 
 
-
-
- 
-
     header {
-        min-height: 40%;
+        min-height: 15%;
     }
 
     header .header-content {
@@ -213,31 +192,81 @@ header .header-content .header-content-inner p {
         max-width: 80%;
         font-size: 18px;
     }
-
-
-.section-heading {
-    margin-top: 0;
 }
 
-.service-box {
-    margin: 50px auto 0;
-    max-width: 400px;
+#wrapper {
+
 }
 
-    .service-box {
-        margin: 20px auto 0;
-    }
+#leftside {
+    width: 25%;
+    height: 100vw;
+    float: left;
 }
 
-.service-box p {
-    margin-bottom: 0;
+#rightside {
+    width: 75%;
+    height: 80vh;
+    float: left;
+    background-color: #ccc;
 }
 
-.input-group-lg{
-margin:0 auto;
-float:none;
-    margin-bottom: 20px;
-    width: 50%;
+#leftside i {
+    width: 100%;
+    text-align: center;
+    font-size: 7em;
+    margin-top: 10%;
 }
+
+#leftside p {
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 10%;
 }
+
+#msgBoxAndEndRow {
+    height: 75%;
+    width: 100%;
+    padding: 5px; 
+    background-color: red;
+}
+
+#msgBox {
+    height: 100%;
+    width: 80%;
+    float: left;
+    background-color: white;
+}
+
+#endButton {
+    height: 100%;
+    width: 20%;
+    float: left;
+    background-color: green;
+}
+
+#inputAndSendRow {
+    clear: both;
+    height: 25%;
+    width: 100%;
+    padding: 5px;
+    background-color: blue;
+}
+
+#inputText {
+    height: 100%;
+    width: 80%;
+    float: left;
+    background-color: white;
+}
+
+#sendButton {
+    height: 100%;
+    width: 20%;
+    float: left;
+    background-color: green;
+}
+
+
 
