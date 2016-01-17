@@ -97,9 +97,15 @@
     </header>
 <div class="tableHeading">
 <p>First Name:</p>
+<<<<<<< HEAD
+<p class="editable" id="firstName"><?php echo $Person["FirstName"]?></p>
+<p>Last Name:</p>
+    <p class="editable" id="lastName"><?php echo $Person["LastName"]?></p>
+=======
 <p class="editable" id="firstNameEdit"><?php echo $person["FirstName"]?></p>
 <p>Last Name:</p>
     <p class="editable" id="lastNameEdit"><?php echo $person["LastName"]?></p>
+>>>>>>> origin/master
             <p id="editButton1"  class="btn btn-default" ><i class="fa fa-pencil"></i></p>
 
 </div>
