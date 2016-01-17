@@ -8,6 +8,16 @@ body{
 	margin-top: 20vw;
 }
 
+.pageScroll{
+  cursor: hand;
+  cursor: pointer;
+}
+
+.navbar-brand{
+  cursor: hand;
+  cursor: pointer;
+}
+
 .basicForm {
 	margin-bottom: 2vw;
 }
