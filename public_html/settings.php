@@ -1,3 +1,18 @@
+<?php
+    session_start();
+    $username=$_SESSION["Username"];
+    echo $username;
+    $con = mysqli_connect("fdb3.awardspace.net","2035081_letstalk","SimplyCoded1","2035081_letstalk","3306");
+
+    //Check connection
+    if(mysqli_connect_errno()){
+        echo"Fail";
+    }
+    $sql="SELECT * FROM `2035081_letstalk`.`Person` WHERE `Email` = '". $username . "';";
+    $result=mysqli_query($con, $sql);
+    $person = $result->fetch_assoc();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,56 +56,6 @@
 </head>
 
 <body id="page-top">
-    <?php
-       $username=$_SESSION["Username"];
-       $con = mysqli_connect("fdb3.awardspace.net","2035081_letstalk","SimplyCoded1","2035081_letstalk","3306");
-
-       //Check connection
-       if(mysqli_connect_errno()){
-        echo"Fail";
-       }
-       $usernameSplit=explode(" ", $username);
-       $sql="SELECT*FROM `Person` WHERE `UserAdjective` = '". $usernameSplit[0] ."' AND `UserNoun` = '" . $usernameSplit[1] . "'";
-       $result=mysqli_query($con, $sql);
-        $person = $result->fetch_assoc();
-
-    ?>
-
-    <?php
-    $smallAchievement = mysql_escape_string($_POST['SmallAchievement']);                                          //Retrieve patient information to be updated
-    $description = mysql_escape_string($_POST['Description']);                                          //Retrieve patient information to be updated
-
-    $firstName = mysql_escape_string($_POST['FirstName']);                                          //Retrieve patient information to be updated
-    $lastName = mysql_escape_string($_POST['LastName']);  
-    $gender = mysql_escape_string($_POST['Gender']);
-    $streetNum = mysql_escape_string($_POST['StreetNum']);
-    $streetName = mysql_escape_string($_POST['StreetName']);
-    $city = mysql_escape_string($_POST['City']);
-     $region = mysql_escape_string($_POST['Region']);
-     $country = mysql_escape_string($_POST['Country']);
-     $postalCode = mysql_escape_string($_POST['PostalCode']);                                                                                       // Create connection
-    $con = mysqli_connect("fdb3.awardspace.net","2035081_letstalk","SimplyCoded1","2035081_letstalk","3306");
-                                                                                            // Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
-    $sqlComman = "UPDATE `chrism12_mysql`.`Person` SET 
-                `SmallAchievement` = '" . $smallAchievement . "',
-                `Description` = '" . $description . "',
-                `FirstName` = '" . $firstName . "',
-                `LastName` = '" . $lastName . "',
-                `gender` = '" . $gender . "', 
-                `StreetNum` = '" . $streetNum . "', 
-                `StreetName` = '" . $streetName . "',
-                `City` = '" . $city . "'
-                `Region` = '" . $region . "'
-                `Country` = '" . $country . "'
-                `postalCode` = '" . $postalCode . "'
-
-                WHERE `Person`.`Email` = '" . $email . "';";                           //Make SQL cmd to update Patient Information
-    mysqli_query($conn,$sqlComman);                                                     //Execute Update
-?>
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->

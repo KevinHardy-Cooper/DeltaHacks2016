@@ -83,7 +83,7 @@
                     </div>
                   </form>
 
-                <a id="signInButton" href="signin" class="btn btn-primary btn-xl page-scroll">Sign In</a>
+                <a id="signInButton" class="btn btn-primary btn-xl page-scroll">Sign In</a>
             </div>
         </div>
     </header>
