@@ -109,7 +109,7 @@ $(#signUpButton).click(function (){
 	if (mysqli_connect_errno()) {
   		echo "Fail";
   	}
-	$result = mysqli_query($con, $sql);
+	$result = mysqli_query($con, $personInsertCmd);
 
 
 ?>
