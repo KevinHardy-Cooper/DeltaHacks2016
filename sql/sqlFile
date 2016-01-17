@@ -50,7 +50,7 @@ CREATE TABLE `2035081_letstalk`.`Log`(
 	`TalkerEmail` VARCHAR(255) NOT NULL,
 	`SenderEmail` VARCHAR(255) NOT NULL,
 	`Message` VARCHAR(1023) NOT NULL,
-	`TimeStamp` TIMESTAMP NOT NULL,
+	`TimeStamp` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
 	CONSTRAINT chk_emails CHECK (SenderEmail = ListenerEmail OR SenderEmail = TalkerEmail OR SenderEmail = "SYSTEM"),
 	FOREIGN KEY (`SenderEmail`) REFERENCES Person (`Email`),
