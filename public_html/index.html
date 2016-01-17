@@ -114,7 +114,9 @@
                 'password': password
             },
             success: function(msg) {
-                alert(msg);
+                if(msg == "True"){
+                    window.location.href="home.php";
+                }
             }
         });
     });
