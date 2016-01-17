@@ -6,9 +6,9 @@ div { width: 50%; float: left;  }
 height: 49%; }
 #listen { background-color: rgba(155, 205, 215, 0.7);
 height: 49%; }
-#community { background-color: rgba(208, 231, 170, 0.7);
+#settings { background-color: rgba(208, 231, 170, 0.7);
 height: 49%; }
-#settings { background-color: rgba(180, 180, 208, 0.7);
+#community { background-color: rgba(180, 180, 208, 0.7);
 height:49%; }
 
 .navbar-default {
@@ -57,93 +57,78 @@ height:49%; }
     background-color: transparent;
 }
 
-.portfolio-box {
-	float:middle;
-    display: block;
-    position: relative;
-    margin-top: 25%;
-    max-width: 650px;
-}
-
-.portfolio-box .portfolio-box-caption {
-    display: block;
-    position: absolute;
-    height: 0;
-    width: 200%;
-    text-align: center;
-    color: #000;
-    opacity: 1;
-    background: rgba(117,117,200,.9);
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    transform: translateY(-50%);
-}
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    padding: 0 15px;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    font-size: 18px;
-}
 
 #talkIcon{
 	color: #729531;
+    position: absolute;
+    left: 30%;
+    top: 0%;
 }
 
 #talkCaption{
 	color: #729531;
+    position: absolute;
+    left: 30%;
+    top: 0%;
 }
 #talkIcon:hover{
 	color: #97B658;
+
 }
 
 #listenIcon{
 	color: #506197;
+    position: absolute;
+    left: 30%;
+    top: 0%;
 }
 
 #listenCaption{
 	color: #506197;
+    position: absolute;
+    left: 30%;
+    top: 0%;
 }
 #listenIcon:hover{
 	color: #7987B6;
 }
 
-#communityIcon{
-	color: #3E804F;
-}
-
-#communityCaption{
-	color: #3E804F;
-}
-#communityIcon:hover{
-	color: #61986F;
-}
-
 #settingsIcon{
-	color: #6F5A8C;
+	color: #3E804F;
+    position: absolute;
+    left: 30%;
+    top: 0%;
 }
 
 #settingsCaption{
-	color: #6F5A8C;
+	color: #3E804F;
+    position: absolute;
+    left: 30%;
+    top: 0%;
 }
 #settingsIcon:hover{
+	color: #61986F;
+}
+
+#communityIcon{
+	color: #6F5A8C;
+    position: absolute;
+    left: 30%;
+    top: 0%;
+}
+
+#communityCaption{
+	color: #6F5A8C;
+    position: absolute;
+    left: 30%;
+    top: 0%;
+}
+#communityIcon:hover{
 	color: #9080A5;
+}
+
+.big-icon{
+    font-size:200px;
 }
 
 @media(min-width:768px) {
@@ -209,94 +194,75 @@ height:49%; }
     .navbar-default.affix .nav>li>a:focus:hover {
         color: #75B1C8;
     }
-.portfolio-box {
-	float:middle;
-    display: block;
-    position: relative;
-    margin-top: 25%;
-    max-width: 650px;
-}
-
-.portfolio-box .portfolio-box-caption {
-    display: block;
-    position: absolute;
-    height: 0;
-    width: 200%;
-    text-align: center;
-    color: #000;
-    opacity: 1;
-    background: rgba(117,117,200,.9);
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    transform: translateY(-50%);
-}
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    padding: 0 15px;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    font-size: 18px;
-}
 
 #talkIcon{
-	color: #729531;
+    color: #729531;
+    position: absolute;
+    left: 15%;
+    top: 12%;
 }
 
 #talkCaption{
-	color: #729531;
+    color: #729531;
+    position: absolute;
+    left: 22%;
+    top: 40%;
 }
 #talkIcon:hover{
-	color: #97B658;
+    color: #97B658;
 }
 
 #listenIcon{
-	color: #506197;
+    color: #506197;
+    position: absolute;
+    left: 67%;
+    top: 12%;
 }
 
 #listenCaption{
-	color: #506197;
+    color: #506197;
+    position: absolute;
+    left: 73%;
+    top: 40%;
 }
 #listenIcon:hover{
-	color: #7987B6;
+    color: #7987B6;
 }
-
 #communityIcon{
-	color: #3E804F;
+    color: #6F5A8C;
+    position: absolute;
+    left: 14%;
+    top: 61%;
 }
 
 #communityCaption{
-	color: #3E804F;
-}
-#communityIcon:hover{
-	color: #61986F;
+    color: #6F5A8C;
+    position: absolute;
+    left: 20%;
+    top: 90%;
 }
 
+#communityIcon:hover{
+    color: #9080A5;
+}
 #settingsIcon{
-	color: #6F5A8C;
+    color: #3E804F;
+    position: absolute;
+    left: 66%;
+    top: 61%;
 }
 
 #settingsCaption{
-	color: #6F5A8C;
+    color: #3E804F;
+    position: absolute;
+    left: 73%;
+    top: 90%;
 }
 #settingsIcon:hover{
-	color: #9080A5;
+    color: #61986F;
 }
+
+
 }
 
 
