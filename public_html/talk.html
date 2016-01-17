@@ -80,30 +80,55 @@
 
                      <!-- Split button -->
                       <div class="btn-group">   
-                        <button type="button" class="btn btn-default">Action</button>
+                        <button type="button" class="btn btn-default">Topics</button>
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                           <span class="caret"></span>
-                          <span class="sr-only">Toggle Dropdown</span>
                         </button>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Action</a></li>
-                          <li><a href="#">Another action</a></li>
-                          <li><a href="#">Something else here</a></li>
-                          <li class="divider"></li>
-                          <li><a href="#">Separated link</a></li>
+                        <ul class="dropdown-menu">
+                          <li><value="Abuse/Violence">Abuse/Violence</a></li>
+                           <li><value="Addictions">Addictions</a></li>
+                           <li><value="Anger Management">Anger Management</a></li>
+                           <li><value="Another Perspective">Another Perspective</a></li>
+                          <li><value="Child Birth">Child Birth</a></li>
+                          <li><value="Clinical Disorder">Clinical Disorder</a></li>
+                          <li><value="Death of a Loved One">Death of a Loved One</a></li>
+                          <li><value="Depression">Depression</a></li>
+                          <li><value="Divorce">Divorce</a></li>
+                          <li><value="Eating Disorder">Eating Disorder</a></li>
+                          <li><value="Get Something Off Your Chest">Get Something Off Your Chest</a></li>
+                           <li><value="Gender Orientation">Gender Orientation</a></li>
+                          <li><value="Home Life">Home Life</a></li>
+
+                          <li><value="Jealousy">Jealousy</a></li>
+                          <li><value="Job Improvement">Job Improvement</a></li>
+                          <li><value="Marriage">Marriage</a></li>
+                          <li><value="Overcome Fear">Overcome Fear</a></li>
+                          <li><value="Post Traumatic Stress Disorder">Post Traumatic Stress Disorder</a></li>
+                           <li><value="Rant">Rant</a></li>
+                           <li><value="Relationship Improvement">Relationship Improvement</a></li>
+                          <li><value="Relieve Emotional Distress">Relieve Emotional Distress</a></li>
+                          <li><value="Self Exploration">Self Exploration</a></li>
+                         <li><value="Sexuality">Sexuality</a></li>
+                          <li><value="Sexual Dysfunction">Sexual Dysfunction</a></li>
+                           <li><value="Social Anxiety">Social Anxiety</a></li>
+                          <li><value="Sterility">Sterility</a></li>
+                          <li><value="Social Anxiety">Social Anxiety</a></li>
+                          <li><value="Work Life">Work Life</a></li>
                         </ul>
                       </div>
 
                      <!-- INPUTS -->
-                    <input type="text" class="form-control" placeholder="Topic">
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <input class="form-control" placeholder="Topic">
+                    <button onclick="Submit();" class="btn btn-default">Submit</button>
                    </form>
 
                  </div>
                 </div>
             </div>
         </div>
+
     </header>
+
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -118,6 +143,16 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+
+    <script> type="text/javascript">
+      function Submit()
+      {
+        form=document.getElementByID('topic');
+        form.target='_blank';
+        form.action='matches.html';
+        form.submit();
+      }
+      </script>
 
 </body>
 

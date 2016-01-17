@@ -70,9 +70,7 @@ aside {
 .no-padding {
     padding: 0;
 }
-#topicBar{
-    display: inline-block;
-}
+
 .navbar-default {
     border-color: color: rgba(9,79,106,.7);
     
@@ -163,110 +161,22 @@ header .header-content .header-content-inner p {
     font-weight: 300;
     color: #073156;
 }
+header .navbar-default{
+    display: inline-block;
+    list-style-type: none;
+
+}
 
 .btn-default {
     border-color: #fff;
-    color: #E3B646;
+    color: #073156;
     background-color: #fff;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
 }
 
-#saveButton {
-        position: absolute;
 
-    bottom: -190px;
-    right:30%;
-        width:10vw;
-
-    border-color: #75B1C8;
-    color: rgba(9,79,106,.7);
-    background-color: color: #75B1C8;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-
-#discardButton {
-        position: absolute;
-
-    bottom:-190px;
-    right:40%;
-        width:10vw;
-
-    border-color: #75B1C8;
-    color: rgba(9,79,106,.7);
-    background-color: color: #75B1C8;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-#becomeListenerButton {
-    position: absolute;
-    bottom:-150px;
-    right: 35%;
-    width:30vw;
-    border-color: #75B1C8;
-    color: rgba(9,79,106,.7);
-    background-color: color: #75B1C8;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-
-#editButton1 {
-    position:absolute;
-    bottom:-45px;
-    right: 150px;
-    width:3vw;
-    height:2vw;
-    border-color: #75B1C8;
-    color: rgba(9,79,106,.7);
-    background-color: color: #75B1C8;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-
-#editButton2 {
-    position: absolute;
-    bottom:-71px;
-    right: 150px;
-    width:3vw;
-    height:2vw;
-    border-color: #75B1C8;
-    color: rgba(9,79,106,.7);
-    background-color: color: #75B1C8;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-
-#editButton3 {
-    position: absolute;
-    bottom:-97px;
-    right: 150px;
-    width:3vw;
-        height:2vw;
-
-    border-color: #75B1C8;
-    color: rgba(9,79,106,.7);
-    background-color: color: #75B1C8;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-
-.tableHeading p {
-    display:inline;
-}
-.tableHeading1 p{
-display: inline;
-}
-.tableHeading2 p{
-display: inline;
-}
 
 @media(min-width:768px) {
     .navbar-default {

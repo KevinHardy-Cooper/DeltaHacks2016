@@ -45,4 +45,6 @@
     // Initialize WOW.js Scrolling Animations
     new WOW().init();
 
+    $('.dropdown-toggle').dropdown()
+
 })(jQuery); // End of use strict
