@@ -118,6 +118,82 @@ aside {
     background-color: transparent;
 }
 
+.input-group-lg{
+margin:0 auto;
+float:none;
+    margin-bottom: 20px;
+    width: 50%;
+}
+header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: #E36146;
+    background-image: url(../img/header.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+header .header-content {
+    position: relative;
+    width: 100%;
+    padding: 100px 15px;
+    text-align: center;
+}
+
+header .header-content .header-content-inner h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+header .header-content .header-content-inner hr {
+    margin: 30px auto;
+}
+
+header .header-content .header-content-inner p {
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #E36146;
+}
+
+.btn-default {
+    border-color: #fff;
+    color: #E3B646;
+    background-color: #fff;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+#signUpButton {
+
+    position: absolute;
+    top:110%;
+    right:2%;
+    border-color: #75B1C8;
+    color: rgba(9,79,106,.7);
+    background-color: color: #75B1C8;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+#signInButton {
+    border-color: color: rgba(9,79,106,.7);
+    color: #fff;
+    background-color: color: rgba(9,79,106,.7);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
 @media(min-width:768px) {
     .navbar-default {
         border-color: rgba(255,255,255,.3);
@@ -167,48 +243,7 @@ aside {
     .navbar-default.affix .nav>li>a:focus:hover {
         color: #75B1C8;
     }
-}
 
-header {
-    position: relative;
-    width: 100%;
-    min-height: auto;
-    text-align: center;
-    color: #E36146;
-    background-image: url(../img/header.jpg);
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-header .header-content {
-    position: relative;
-    width: 100%;
-    padding: 100px 15px;
-    text-align: center;
-}
-
-header .header-content .header-content-inner h1 {
-    margin-top: 0;
-    margin-bottom: 0;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-header .header-content .header-content-inner hr {
-    margin: 30px auto;
-}
-
-header .header-content .header-content-inner p {
-    margin-bottom: 50px;
-    font-size: 16px;
-    font-weight: 300;
-    color: #E36146;
-}
-
-@media(min-width:768px) {
     header {
         min-height: 100%;
     }
@@ -234,7 +269,7 @@ header .header-content .header-content-inner p {
         max-width: 80%;
         font-size: 18px;
     }
-}
+
 
 .section-heading {
     margin-top: 0;
@@ -245,7 +280,6 @@ header .header-content .header-content-inner p {
     max-width: 400px;
 }
 
-@media(min-width:992px) {
     .service-box {
         margin: 20px auto 0;
     }
@@ -255,40 +289,11 @@ header .header-content .header-content-inner p {
     margin-bottom: 0;
 }
 
-.btn-default {
-    border-color: #fff;
-    color: #E3B646;
-    background-color: #fff;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-
 .input-group-lg{
-    margin-left: auto;
-    margin-right: auto;
+margin:0 auto;
+float:none;
     margin-bottom: 20px;
-    width: 50vw;
+    width: 50%;
+}
 }
 
-#signUpButton {
-
-    position: absolute;
-    top:110%;
-    right:2%;
-    border-color: #75B1C8;
-    color: rgba(9,79,106,.7);
-    background-color: color: #75B1C8;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-
-#signInButton {
-    border-color: color: rgba(9,79,106,.7);
-    color: #fff;
-    background-color: color: rgba(9,79,106,.7);
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
