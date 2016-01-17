@@ -183,6 +183,20 @@
         //Build HTML with PHP, send back here
         //msgBox.write();
     }
+
+    $("#endButton").click(function() {
+        var username = $("#userEmail").text();
+        $.ajax({
+            method: 'get',
+            url: 'php/deleteLog.php',
+            data: {
+                'username': username
+            },
+            success: function(msg) {
+                alert("Deleted");
+            }
+        });
+    });
     </script>
 
 </body>
