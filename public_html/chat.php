@@ -65,35 +65,23 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <header>           
+    <header>
+                       
         <div class="header-content">
+           
+
             <div class="header-content-inner">
+                <h1><i class="fa fa-circle-o"></i></h1>
+                <p>desc</p>
             </div>
         </div>
     </header>
 
-
-    <div id="wrapper">
-
-        <div id="leftside">
-            <i class="fa fa-circle-o fa-3x"></i>
-            <p>desc</p>
-        </div>
-
-        <div id="rightside">
-            <div id="msgBoxAndEndRow"> 
-                <div id="msgBox"> </div>
-                <div id="endButton"> <button class="button"> Say Good-Bye! </button> </div>
-            </div>
-            <div id="inputAndSendRow"> 
-                <div id="inputText"> </div>
-                <div id="sendButton"> </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="flag"> </div>
-
+   
+         <a id="endConvoButton"  class="btn btn-default" >End Conversation</a>
+          <a id="flagButton" class="btn btn-default" ><i class="fa fa-flag-o"></i></a>
+          <a id="sendButton" href="sign-up.html"  class="btn btn-default" ><i class="fa fa-envelope-o fa-4x"></i></a>
+                   
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -110,7 +98,85 @@
     <script src="js/creative.js"></script>
 
     <script>
-    </script>
+    $("#editButton1").click(function() {
+                $(".editable").attr("contenteditable", true);
+            } 
+                $("#saveButton").html("saveButton");
+                $(".editable").attr("contenteditable", false);
+                $.ajax({
+                    type: "POST",
+                    url: "settings.html",
+                    data: { 
+                            firstName: $("#FirstName").html(),
+                            lastName: $("#LastName").html()
+                            
+                        }
+                }).done(function( msg ) {
+                    //alert(msg);
+                    location.reload();
+                });
+            }
+        });
+    $("#editButton1").click(function() {
+                $(".editable").attr("contenteditable", true);
+            } 
+                $("#saveButton").html("saveButton");
+                $(".editable").attr("contenteditable", false);
+                $.ajax({
+                    type: "POST",
+                    url: "settings.html",
+                    data: { 
+                            firstName: $("#FirstName").html(),
+                            lastName: $("#LastName").html()
+                            
+                        }
+                }).done(function( msg ) {
+                    //alert(msg);
+                    location.reload();
+                });
+            }
+        });
+    $("#editButton2").click(function() {
+                $(".editable").attr("contenteditable", true);
+            } 
+                $("#saveButton").html("saveButton");
+                $(".editable").attr("contenteditable", false);
+                $.ajax({
+                    type: "POST",
+                    url: "settings.html",
+                    data: { 
+                            gender: $("#Gender").html(),                            
+                        }
+                }).done(function( msg ) {
+                    //alert(msg);
+                    location.reload();
+                });
+            }
+        });
+    $("#editButton3").click(function() {
+                $(".editable").attr("contenteditable", true);
+            } 
+                $("#saveButton").html("saveButton");
+                $(".editable").attr("contenteditable", false);
+                $.ajax({
+                    type: "POST",
+                    url: "settings.html",
+                    data: { 
+                            streetNum: $("#StreetNum").html(),
+                            streetName: $("#streetName").html()
+                            city: $("#City").html()
+                            region: $("#Region").html()
+                            country: $("#Country").html()
+                            postalCode: $("#PostalCode").html()
+                            
+                        }
+                }).done(function( msg ) {
+                    //alert(msg);
+                    location.reload();
+                });
+            }
+        });
+</script>
 
 </body>
 

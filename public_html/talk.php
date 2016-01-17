@@ -1,5 +1,5 @@
 <?php
-  start_session();
+  session_start();
   $username = $_SESSION["Username"];
   $con = mysqli_connect("fdb3.awardspace.net","2035081_letstalk","SimplyCoded1","2035081_letstalk","3306");
   $sql = "SELECT * FROM `2035081_letstalk`.`Person` WHERE `Email` = '". $username ."';";
