@@ -35,7 +35,7 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="nav navbar-nav navbar-header">
-            <a id="logo" class="navbar-brand page-scroll" href="#page-top">Let's Talk</a>
+            <a id="logo" class="navbar-brand page-scroll" onclick="scrollToTop()">L e t 's &nbsp; T a l k</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -43,7 +43,7 @@
                 <ul class="nav navbar-nav navbar-right">
                    
                     <li>
-                        <a id="webname" href="#page-top"class=" navbar-brand page-scroll" >Letstalkaboutthat.com</a><!--TODO-->
+                        <a id="webname" class=" navbar-brand page-scroll" onclick="scrollToTop()">Letstalkaboutthat.com</a><!--TODO-->
                     </li>
                     
                 </ul>
@@ -165,6 +165,11 @@
 
 
 <script type="text/javascript">
+
+	function scrollToTop() {
+		window.scrollTo(500, 0);
+	}
+
 	$("#next-button").click(function (){
 		var fName = $("#firstName").val();	
 		var lName = $("#lastName").val();	
