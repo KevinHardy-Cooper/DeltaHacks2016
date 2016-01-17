@@ -84,7 +84,7 @@
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                           <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul id="topics" class="dropdown-menu">
                           <li><value="Abuse/Violence">Abuse/Violence</a></li>
                            <li><value="Addictions">Addictions</a></li>
                            <li><value="Anger Management">Anger Management</a></li>
@@ -145,12 +145,9 @@
     <script src="js/creative.js"></script>
 
     <script> type="text/javascript">
-      function Submit()
+      function input()
       {
-        form=document.getElementByID('topic');
-        form.target='_blank';
-        form.action='matches.html';
-        form.submit();
+        form=document.getElementByID('topics');
       }
       </script>
 
