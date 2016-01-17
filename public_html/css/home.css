@@ -57,68 +57,37 @@ height:49%; }
     background-color: transparent;
 }
 
-.portfolio-box {
-	float:middle;
-    display: block;
-    position: relative;
-    margin-top: 25%;
-    max-width: 650px;
-}
-
-.portfolio-box .portfolio-box-caption {
-    display: block;
-    position: absolute;
-    height: 0;
-    width: 200%;
-    text-align: center;
-    color: #000;
-    opacity: 1;
-    background: rgba(117,117,200,.9);
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    transform: translateY(-50%);
-}
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    padding: 0 15px;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    font-size: 18px;
-}
 
 #talkIcon{
 	color: #729531;
+    position: absolute;
+    left: 30%;
+    top: 0%;
 }
 
 #talkCaption{
 	color: #729531;
+    position: absolute;
+    left: 30%;
+    top: 0%;
 }
 #talkIcon:hover{
 	color: #97B658;
+
 }
 
 #listenIcon{
 	color: #506197;
+    position: absolute;
+    left: 30%;
+    top: 0%;
 }
 
 #listenCaption{
 	color: #506197;
+    position: absolute;
+    left: 30%;
+    top: 0%;
 }
 #listenIcon:hover{
 	color: #7987B6;
@@ -126,10 +95,16 @@ height:49%; }
 
 #settingsIcon{
 	color: #3E804F;
+    position: absolute;
+    left: 30%;
+    top: 0%;
 }
 
 #settingsCaption{
 	color: #3E804F;
+    position: absolute;
+    left: 30%;
+    top: 0%;
 }
 #settingsIcon:hover{
 	color: #61986F;
@@ -137,10 +112,16 @@ height:49%; }
 
 #communityIcon{
 	color: #6F5A8C;
+    position: absolute;
+    left: 30%;
+    top: 0%;
 }
 
 #communityCaption{
 	color: #6F5A8C;
+    position: absolute;
+    left: 30%;
+    top: 0%;
 }
 #communityIcon:hover{
 	color: #9080A5;
@@ -213,57 +194,19 @@ height:49%; }
     .navbar-default.affix .nav>li>a:focus:hover {
         color: #75B1C8;
     }
-.portfolio-box {
-	float:middle;
-    display: block;
-    position: relative;
-    margin-top: 25%;
-    max-width: 650px;
-}
-
-.portfolio-box .portfolio-box-caption {
-    display: block;
-    position: absolute;
-    height: 0;
-    width: 200%;
-    text-align: center;
-    color: #000;
-    opacity: 1;
-    background: rgba(117,117,200,.9);
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    transform: translateY(-50%);
-}
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    padding: 0 15px;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    font-size: 18px;
-}
 
 #talkIcon{
     color: #729531;
+    position: absolute;
+    left: 15%;
+    top: 12%;
 }
 
 #talkCaption{
     color: #729531;
+    position: absolute;
+    left: 22%;
+    top: 40%;
 }
 #talkIcon:hover{
     color: #97B658;
@@ -271,36 +214,55 @@ height:49%; }
 
 #listenIcon{
     color: #506197;
+    position: absolute;
+    left: 67%;
+    top: 12%;
 }
 
 #listenCaption{
     color: #506197;
+    position: absolute;
+    left: 73%;
+    top: 40%;
 }
 #listenIcon:hover{
     color: #7987B6;
 }
+#communityIcon{
+    color: #6F5A8C;
+    position: absolute;
+    left: 14%;
+    top: 61%;
+}
 
+#communityCaption{
+    color: #6F5A8C;
+    position: absolute;
+    left: 20%;
+    top: 90%;
+}
+
+#communityIcon:hover{
+    color: #9080A5;
+}
 #settingsIcon{
     color: #3E804F;
+    position: absolute;
+    left: 66%;
+    top: 61%;
 }
 
 #settingsCaption{
     color: #3E804F;
+    position: absolute;
+    left: 73%;
+    top: 90%;
 }
 #settingsIcon:hover{
     color: #61986F;
 }
 
-#communityIcon{
-    color: #6F5A8C;
-}
 
-#communityCaption{
-    color: #6F5A8C;
-}
-#communityIcon:hover{
-    color: #9080A5;
-}
 }
 
 
