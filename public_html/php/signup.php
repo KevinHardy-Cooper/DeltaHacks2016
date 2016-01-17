@@ -80,8 +80,8 @@ $(#signUpButton).click(function (){
 });
 
 */
-	$username = $_GET['username'];
-	$usernamePieces = explode(" ", $username);
+	$username = $_GET['usernameNoun'];
+	$username = $_GET['usernameAdjective'];
 	$fName = $_GET['fName'];
 	$lName = $_GET['lName'];
 	$email = $_GET['email'];
@@ -96,11 +96,12 @@ $(#signUpButton).click(function (){
 	$gender = $_GET['gender'];
 
 	$personInsertCmd = "INSERT INTO `2035081_letstalk`.`Person` VALUES (`" . $email . "`, `" . $fName . "`, `" . $lName . "`, `" . $password . 
-		"`, `" . $usernamePieces[0]. "`, `" . $usernamePieces[1] . "`, `" . $gender . "`, `" . $signUpAch . "`, `" . $aCod . "`, `" . $aStr .
+		"`, `" . $usernameNoun. "`, `" . $usernameAdjective . "`, `" . $gender . "`, `" . $signUpAch . "`, `" . $aCod . "`, `" . $aStr .
 		"`, `" . $aNum . "`, `" . $aCit . "`, `" . $aReg . "`, `" . $aCou . "`)";
 
-	$listenerInsertCmd = "INSERT INTO `2035081_letstalk`.`Listener` VALUES (`" . $email . "`, `" . $solver . "`, `" . $listenExp . "`, `" .
-		$personalExp . "`, `" . $bluntness . "`);";
+	//TODO Implement Listener functionality.
+	//$listenerInsertCmd = "INSERT INTO `2035081_letstalk`.`Listener` VALUES (`" . $email . "`, `" . $solver . "`, `" . $listenExp . "`, `" .
+	//	$personalExp . "`, `" . $bluntness . "`);";
 
 	$con = mysqli_connect("localhost:8889","root","root","mysql");
 
