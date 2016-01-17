@@ -1,5 +1,4 @@
-	<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -32,13 +31,11 @@
 </head>
 
 <body>
-
 	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="nav navbar-nav navbar-header">
-               
-                <a id="logo" class="navbar-brand page-scroll" href="#page-top">Let's Talk</a>
+            <a id="logo" class="navbar-brand page-scroll" href="#page-top">Let's Talk</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -130,35 +127,36 @@
 			</div>
 		</div>
 
+		<div id="selectWrapper">
+			<div class="select">
+	    		<span class="arr"></span>
+				<select id="adjective" class="usernameDrop">
+	  				<option value="Sexy">Sexy</option>
+	  				<option value="Erotic">Erotic</option>
+	  				<option value="Alluring">Alluring</option>
+	  				<option value="Capricious">Capricious</option>
+	  				<!--TODO: Replace with generated function -->
+				</select>
+			</div>
 
-		<div class="select">
-    		<span class="arr"></span>
-			<select id="adjective">
-  				<option value="Sexy">Sexy</option>
-  				<option value="Erotic">Erotic</option>
-  				<option value="Alluring">Alluring</option>
-  				<option value="Capricious">Capricious</option>
-  				<!--TODO: Replace with generated function -->
-			</select>
-		</div>
-
-		<div class="select">
-    		<span class="arr"></span>
-			<select id="noun">
-  				<option value="Erc">Erc</option>
-  				<option value="Zebroid">Zebroid</option>
-  				<option value="Mantis Shrip">Mantis Shrimp</option>
-  				<option value="Cuttlefish">Cuttlefish</option>
-			</select>
+			<div class="select">
+	    		<span class="arr"></span>
+				<select id="noun" class="usernameDrop">
+	  				<option value="Erc">Erc</option>
+	  				<option value="Zebroid">Zebroid</option>
+	  				<option value="Mantis Shrip">Mantis Shrimp</option>
+	  				<option value="Cuttlefish">Cuttlefish</option>
+				</select>
+			</div>
 		</div>
 	</div>
 
 	<textarea rows="4" cols="50" maxlength="140" id = "signUpAchievement">Stuff, Stuff, Stufff...</textarea>
 
 	<form action="">
-	  	<input type="radio" name="gender" value="male" class="gender" id="male"> Male<br>
-	  	<input type="radio" name="gender" value="female" class="gender" id="female"> Female<br>
-	  	<input type="radio" name="gender" value="other" class="gender" id="other"> Not Specified
+	  	<input type="radio" name="gender" value="male" class="gender col-md-3" id="male"> Male<br>
+	  	<input type="radio" name="gender" value="female" class="gender col-md-3" id="female"> Female<br>
+	  	<input type="radio" name="gender" value="other" class="gender col-md-3" id="other"> Not Specified
 	</form>
 
 	<div id="next-button">Next</div>
@@ -183,11 +181,11 @@
 		var aCou = $("#addressCountry").val();
 		var signUpAch = $("#signUpAchievement").val();
 		var gender;
-		if($("#male").attr("checked") == true) {
+		if($('#male').is(':checked') == true) {
 			gender = "M";
-		} else if($("#female").attr("checked") == true) {
+		} else if($('#female').is(':checked') == true) {
 			gender = "F";
-		} else if($("#other").attr("checked") == true) {
+		} else if($('#other').is(':checked') == true) {
 			gender = "O";
 		} 
 	
@@ -215,7 +213,6 @@
 		//TODO PHP Validate email
 		//TODO Verify Address
 		//TODO Send Valid stuff to PHP
-		alert("sending!");
 		$.ajax({
 			method: 'get',
   			url: 'php/signUp.php',
