@@ -101,9 +101,9 @@
             $testResult = mysqli_query($con, $findFriend);
 
             if (mysqli_num_rows($testResult) > 0) {
-                while($row = mysqli_fetch_assoc($testResult)) {
-                    echo $row["TalkerEmail"];
-                }
+                $row = mysqli_fetch_assoc($testResult);
+                echo $row["TalkerEmail"];
+                
             } else {
                 $findFriend = "SELECT * FROM `2035081_letstalk`.`Log` WHERE `TalkerEmail` = '" . $username . "';";
                 $testResult = mysqli_query($con, $findFriend);
@@ -156,33 +156,60 @@
 
     <script>
 
-    /*Date lastMessage;
+    //TODO Always running update function.
+    //Stores latest message time.
+    //Adds all messages, in order, that are after the previous latest message
+    //Update latest message
+
+    
+
+    var lastSynced;
 
     window.onload = function() {
-        lastMessage = new Date();
-        setInterval(getNewMessages(), 1000);
+        lastSynced = new Date();
+        console.log("Started");
+        setInterval(getNewMessages, 1000);
+    };
+
+    /**
+    * You first need to create a formatting function to pad numbers to two digits…
+    **/
+    function twoDigits(d) {
+        if(0 <= d && d < 10) return "0" + d.toString();
+        if(-10 < d && d < 0) return "-0" + (-1*d).toString();
+        return d.toString();
+    }
+
+    /**
+    * …and then create the method to output the date string as desired.
+    * Some people hate using prototypes this way, but if you are going
+    * to apply this to more than one Date object, having it as a prototype
+    * makes sense.
+    **/
+    Date.prototype.toMysqlFormat = function() {
+        return this.getUTCFullYear() + "-" + twoDigits(1 + this.getUTCMonth()) + "-" + twoDigits(this.getUTCDate()) + " " + twoDigits(this.getUTCHours()) + ":" + twoDigits(this.getUTCMinutes()) + ":" + twoDigits(this.getUTCSeconds());
     };
 
     function getNewMessages() {
         var username = $("#userEmail").text();
-        var friendemail = $("#friendEmail").text();
-        var lastDate = lastMessage;
+
         $.ajax({
             method: 'get',
             url: 'php/getMessages.php',
             data: {
                 'username': username,
-                'friendemail': friendemail,
-                'lastDate': lastDate
+                'lastDate': lastSynced.toMysqlFormat()
             },
             success: function(msg) {
-                
+                //console.log(msg);
+                $("#msgBox").text($("#msgBox").text() + msg);
             }
         });
+        lastSynced = new Date();
         //PHP makes SQL to get new messages
         //Build HTML with PHP, send back here
         //msgBox.write();
-    };*/
+    };
 
     $("#endButton").click(function() {
         var username = $("#userEmail").text();
@@ -214,7 +241,6 @@
         });
     });
     </script>
-
 </body>
 
 </html>
