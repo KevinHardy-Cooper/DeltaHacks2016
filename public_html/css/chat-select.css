@@ -1,0 +1,66 @@
+body{
+    background-color: #5E9B91;
+}
+
+.navbar-default {
+    color: #000000;
+    
+    font-family: 'Lobster', cursive;
+    background-color: #96E4FF;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.navbar-right{
+  color: #9DC6CD;
+  font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+}
+
+.navbar-default .navbar-header .navbar-brand {
+    text-transform: uppercase;
+    font-family: 'Lobster', cursive;
+    font-weight: 700;
+	color: #9DC6CD;
+}
+
+.navbar-default .navbar-header .navbar-brand:hover,
+.navbar-default .navbar-header .navbar-brand:focus {
+    color: #9DC6CD;
+}
+
+.navbar-default .nav > li>a,
+.navbar-default .nav>li>a:focus {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    color: #9DC6CD;
+}
+
+.navbar-default .nav > li>a:hover,
+.navbar-default .nav>li>a:focus:hover {
+    color: #9DC6CD;
+}
+
+.navbar-default .nav > li.active>a,
+.navbar-default .nav>li.active>a:focus {
+    color: #1C68D1;
+    background-color: #9DC6CD;
+}
+
+.navbar-default .nav > li.active>a:hover,
+.navbar-default .nav>li.active>a:focus:hover {
+    background-color: #9DC6CD;
+}
+
+#profile-sidebar{
+    float: left;
+    height: 100vh;
+    width:25%;
+    background-color: #9DC6CD;
+    color: #3F4D84;
+}
+
+.container-fluid{
+    background-color: #015938;
+}
