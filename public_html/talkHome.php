@@ -96,7 +96,10 @@ eg.
 
 
     </header>
-
+<div id="log"></div>
+<script>
+getElementById("topics").innerHTML = login;
+</script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

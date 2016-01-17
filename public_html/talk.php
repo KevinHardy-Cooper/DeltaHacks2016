@@ -87,54 +87,91 @@ eg.
             <div class="header-content-inner">
                 <h1>What do you want to talk about?</h1>
                   
-                <div id="#topicBar" class="navbar navbar-default navbar-static-top">
-                 <div class="navbar-header">
+                <!--
+                   <button class="btn btn-primary dropdown-toggle" >
 
-                   <!-- FORM -->
-                   <form class="navbar-form" action="talkHome.php" method="get">
-
-                      <div class="btn-group">   
                         
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                           <span class="caret"></span>
                         </button>
 
-                        <ul name="topics" class="dropdown-menu" role="menu" >
-                          <li role="presentation"><a role="menuitem"value="Abuse/Violence" onclick="this.form.submit()">Abuse/Violence</a></li>
-                           <li role="presentation"><a role="menuitem"value="Addictions" onclick="this.form.submit()">Addictions</a></li>
-                           <li role="presentation"><a role="menuitem"value="Anger Management" onclick="this.form.submit()">Anger Management</a></li>
-                           <li role="presentation"><a role="menuitem"value="Another Perspective" onclick="this.form.submit()">Another Perspective</a></li>
-                          <li role="presentation"><a role="menuitem"value="Child Birth" onclick="this.form.submit()">Child Birth</a></li>
-                          <li role="presentation"><a role="menuitem"value="Clinical Disorder" onclick="this.form.submit()">Clinical Disorder</a></li>
-                          <li role="presentation"><a role="menuitem"value="Death of a Loved One" onclick="this.form.submit()">Death of a Loved One</a></li>
-                          <li role="presentation"><a role="menuitem"value="Depression" onclick="this.form.submit()">Depression</a></li>
-                          <li role="presentation"><a role="menuitem"value="Divorce" onclick="this.form.submit()">Divorce</a></li>
-                          <li role="presentation"><a role="menuitem"value="Eating Disorder" onclick="this.form.submit()">Eating Disorder</a></li>
-                          <li role="presentation"><a role="menuitem"value="Get Something Off Your Chest" onclick="this.form.submit()">Get Something Off Your Chest</a></li>
-                           <li role="presentation"><a role="menuitem"value="Gender Orientation" onclick="this.form.submit()">Gender Orientation</a></li>
-                          <li role="presentation"><a role="menuitem"value="Home Life" onclick="this.form.submit()">Home Life</a></li>
-
-                          <li role="presentation"><a role="menuitem"value="Jealousy" onclick="this.form.submit()">Jealousy</a></li>
-                          <li role="presentation"><a role="menuitem"value="Job Improvement" onclick="this.form.submit()">Job Improvement</a></li>
-                          <li role="presentation"><a role="menuitem"value="Marriage" onclick="this.form.submit()">Marriage</a></li>
-                          <li role="presentation"><a role="menuitem"value="Overcome Fear" onclick="this.form.submit()">Overcome Fear</a></li>
-                          <li role="presentation"><a role="menuitem"value="Post Traumatic Stress Disorder" onclick="this.form.submit()">Post Traumatic Stress Disorder</a></li>
-                           <li role="presentation"><a role="menuitem"value="Rant" onclick="this.form.submit()">Rant</a></li>
-                           <li role="presentation"><a role="menuitem"value="Relationship Improvement" onclick="this.form.submit()">Relationship Improvement</a></li>
-                          <li role="presentation"><a role="menuitem"value="Relieve Emotional Distress" onclick="this.form.submit()">Relieve Emotional Distress</a></li>
-                          <li role="presentation"><a role="menuitem"value="Self Exploration" onclick="this.form.submit()">Self Exploration</a></li>
-                         <li role="presentation"><a role="menuitem"value="Sexuality" onclick="this.form.submit()">Sexuality</a></li>
-                          <li role="presentation"><a role="menuitem"value="Sexual Dysfunction" onclick="this.form.submit()">Sexual Dysfunction</a></li>
-                           <li role="presentation"><a role="menuitem"value="Social Anxiety" onclick="this.form.submit()">Social Anxiety</a></li>
-                          <li role="presentation"><a role="menuitem"value="Sterility" onclick="this.form.submit()">Sterility</a></li>
-                          <li role="presentation"><a role="menuitem"value="Social Anxiety" onclick="this.form.submit()">Social Anxiety</a></li>
-                          <li role="presentation"><a role="menuitem"value="Work Life" onclick="this.form.submit()">Work Life</a></li>
+                        <ul class="dropdown-menu" >
+                          <li ><a role="menuitem"value="Abuse/Violence" onclick="this.form.value().submit()">Abuse/Violence</a></li>
+                           <li><a role="menuitem"value="Addictions" onclick="this.form.submit()">Addictions</a></li>
+                           <li ><a role="menuitem"value="Anger Management" onclick="this.form.submit()">Anger Management</a></li>
+                           <li ><a role="menuitem"value="Another Perspective" onclick="this.form.submit()">Another Perspective</a></li>
+                          <li ><a role="menuitem"value="Child Birth" onclick="this.form.submit()">Child Birth</a></li>
+                          <li><a role="menuitem"value="Clinical Disorder" onclick="this.form.submit()">Clinical Disorder</a></li>
+                          <li><a role="menuitem"value="Death of a Loved One" onclick="this.form.submit()">Death of a Loved One</a></li>
+                          <li ><a role="menuitem"value="Depression" onclick="this.form.submit()">Depression</a></li>
+                          <li ><a role="menuitem"value="Divorce" onclick="this.form.submit()">Divorce</a></li>
+                          <li><a role="menuitem"value="Eating Disorder" onclick="this.form.submit()">Eating Disorder</a></li>
+                          <li><a role="menuitem"value="Get Something Off Your Chest" onclick="this.form.submit()">Get Something Off Your Chest</a></li>
+                           <li><a role="menuitem"value="Gender Orientation" onclick="this.form.submit()">Gender Orientation</a></li>
+                          <li><a role="menuitem"value="Home Life" onclick="this.form.submit()">Home Life</a></li>
+                          <li ><a role="menuitem"value="Jealousy" onclick="this.form.submit()">Jealousy</a></li>
+                          <li ><a role="menuitem"value="Job Improvement" onclick="this.form.submit()">Job Improvement</a></li>
+                          <li><a role="menuitem"value="Marriage" onclick="this.form.submit()">Marriage</a></li>
+                          <li><a role="menuitem"value="Overcome Fear" onclick="this.form.submit()">Overcome Fear</a></li>
+                          <li><a role="menuitem"value="Post Traumatic Stress Disorder" onclick="this.form.submit()">Post Traumatic Stress Disorder</a></li>
+                           <li><a role="menuitem"value="Rant" onclick="this.form.submit()">Rant</a></li>
+                           <li><a role="menuitem"value="Relationship Improvement" onclick="this.form.submit()">Relationship Improvement</a></li>
+                          <li ><a role="menuitem"value="Relieve Emotional Distress" onclick="this.form.submit()">Relieve Emotional Distress</a></li>
+                          <li><a role="menuitem"value="Self Exploration" onclick="this.form.submit()">Self Exploration</a></li>
+                         <li><a role="menuitem"value="Sexuality" onclick="this.form.submit()">Sexuality</a></li>
+                          <li><a role="menuitem"value="Sexual Dysfunction" onclick="this.form.submit()">Sexual Dysfunction</a></li>
+                           <li><a role="menuitem"value="Social Anxiety" onclick="this.form.submit()">Social Anxiety</a></li>
+                          <li><a role="menuitem"value="Sterility" onclick="this.form.submit()">Sterility</a></li>
+                          <li ><a role="menuitem"value="Social Anxiety" onclick="this.form.submit()">Social Anxiety</a></li>
+                          <li><a role="menuitem"value="Work Life" onclick="this.form.submit()">Work Life</a></li>
                         </ul>
                       </div>
 
                     <input type="submit"</input>
 
+                   </form>-->
+                   <form action="talkHome.html" method="GET">
+                    <select name="topics">
+                      <option selected>Rant</option>
+                      <option>Abuse/Violence</option>
+                      <option>Addictions</option>
+                      <option>Anger Management</option>
+                      <option>Another Perspective</option>
+                      <option>Child Birth</option>
+                      <option>Clinical Disorder</option>
+                      <option>Death of a Loved One</option>
+                      <option>Depression</option>
+                      <option>Divorce</option>
+                      <option>Eating Disorder</option>
+                      <option>Emotional Distress</option>                      
+                      <option>Gender Orientation</option>
+                      <option>Home Life</option>
+                      <option>Jealousy</option>
+                      <option>Job Improvement</option>
+                      <option>Marriage</option>
+                      <option>Overcome Fear</option>
+                      <option>Post Traumatic Stress Disorder</option>
+                      <option>Relationship Improvement</option>
+                       <option>Self Exploration</option>
+                      <option>Sexuality</option>
+                      <option>Sexual Dysfunction</option>
+                      <option>Social Anxiety</option>
+                      <option>Sterility</option>
+                      <option>Abuse/Violence</option>
+                      <option>Work Life</option>
+                      <option>Stress</option>
+                    </select>
+                    <noscript><input type="submit" formmethod="post" value="Submit"></noscript>
                    </form>
+                  
+<script language="JavaScript">
+  function processUser()
+  {
+    var parameters = location.search;
+    document.getElementById("topics").innerHTML = l;
+  }
+</script>
+
+
                  </div>
                 </div>
             </div>
