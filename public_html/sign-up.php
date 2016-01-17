@@ -66,7 +66,7 @@
 	</div>
 
 	<div id="listen-talk-slider">
-		<input type ="range" min ="0" max="2.0" step ="1"/>		
+		<input type ="range" min ="0" max="2.0" step ="1" id="listen-talk-val"/>		
 	</div>
 
 	<div id="scrollableForm">
@@ -171,13 +171,15 @@
 	}
 
 	$("#next-button").click(function (){
+
+		//Initialize variables
+		var listenTalkVal = $("#listen-talk-val").val();
 		var fName = $("#firstName").val();	
 		var lName = $("#lastName").val();	
 		var email = $("#email").val();	
 		var password = $("#password").val();
 		var usernameNoun = $("#noun").val();
 		var usernameAdjective = $("#adjective").val();
-	
 		var aNum = $("#addressNumber").val();
 		var aStr = $("#addressStreet").val();
 		var aCit = $("#addressCity").val();
@@ -186,6 +188,8 @@
 		var aCou = $("#addressCountry").val();
 		var signUpAch = $("#signUpAchievement").val();
 		var gender;
+
+		//Gender radio button selection
 		if($('#male').is(':checked') == true) {
 			gender = "M";
 		} else if($('#female').is(':checked') == true) {
@@ -194,6 +198,7 @@
 			gender = "O";
 		} 
 	
+		//Checking value bounds
 		if(fName.length < 1 || fName.length > 255) {
 			moveToError("First Name");
 		} else if(lName.length < 1 || lName.length > 255) {
@@ -215,12 +220,16 @@
 		} else if(signUpAch.length < 5 || signUpAch.length > 140) {
 			moveToError("Sign Up Architecture");
 		} 
+
 		//TODO PHP Validate email
 		//TODO Verify Address
 		//TODO Send Valid stuff to PHP
+
 		$.ajax({
 			method: 'get',
   			url: 'php/signup.php',
+
+  			//Pass data
   			data: {
   				'gender': gender,
     			'fName': fName,
@@ -237,10 +246,33 @@
     			'usernameNoun': usernameNoun,
     			'usernameAdjective': usernameAdjective
   			},
+
+  			//No Errors
   			success: function(msg) {
 
+  				//User is a listener, redirect to listener sign-up
+  				if(listenTalkVal == 0 || listenTalkVal == 1) {
+  					$.ajax({
+            			method: 'get',
+            			url: 'php/verify.php',
+            			data: {
+              				'username': username,
+                			'password': password
+            			},
+            		success: function(msg) {
+                			if(msg == "True"){
+                    			window.location.href="listener-sign-up.php";
+                			}
+            			}
+        			});
+
+        		// User is only a talker, redirect to main home page
+  				} else {
+  					window.location.href="index.php";
+  				}
   			}
 		});
 	});
 </script>
+
 </html>
