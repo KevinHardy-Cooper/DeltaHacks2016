@@ -1,15 +1,20 @@
-html, body { height: 99%; width: 100vw;
+html, body { height: 95%; width: 100vw;
 	padding: 0; margin: 0;  margin-top: 2%;
 background-color: #D8D8D8; }
 div { width: 50%; float: left;  }
 #talk { background-color: rgba(249, 247, 145, 0.7);
-height: 49%; }
+height: 48%; }
 #listen { background-color: rgba(155, 205, 215, 0.7);
-height: 49%; }
+height: 48%; }
 #settings { background-color: rgba(208, 231, 170, 0.7);
-height: 49%; }
+height: 48%; }
 #community { background-color: rgba(180, 180, 208, 0.7);
-height:49%; }
+height:48%; }
+
+.portfolio-box{
+    height: 40%;
+    width: 50%;
+}
 
 .navbar-default {
     border-color: color: rgba(9,79,106,.7);
@@ -22,6 +27,7 @@ height:49%; }
 }
 
 .navbar-right{
+    left: 1px;
     font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
 }
 
@@ -154,7 +160,7 @@ height:49%; }
         color: rgba(9,79,106,.7);
         position: absolute;
         width:100%;
-        left:85%;
+        left:84.8%;
         text-align: right;
         margin: auto;
     }
