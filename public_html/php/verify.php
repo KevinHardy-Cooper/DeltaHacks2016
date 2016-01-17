@@ -23,7 +23,9 @@
     	while($row = mysqli_fetch_assoc($result)) {		
         	$hashed = $row["Password"];							//Get the Hashed Password
         	if (($hashed == crypt($password, $hashed))) {		//Check against input password
-  				echo "True";									
+  				echo "True";
+  				session_start();
+  				$_SESSION["Username"] = $username;									
 			} else {
 				echo "False";
 			}
