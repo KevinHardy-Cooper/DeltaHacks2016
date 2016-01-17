@@ -78,13 +78,18 @@ body{
 }
 
 .navbar-default {
-    border-color: color: rgba(9,79,106,.7);
+    color: #1C68D1;
     
     font-family: 'Lobster', cursive;
     background-color: #fff;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
+}
+
+.navbar-right{
+  color: #1C68D1;
+  font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
 }
 
 .navbar-default .navbar-header .navbar-brand {
@@ -96,7 +101,7 @@ body{
 
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-    color: rgba(9,79,106,.7);
+    color: #1C68D1;
 }
 
 .navbar-default .nav > li>a,
@@ -104,17 +109,17 @@ body{
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
-    color: #222;
+    color: #1C68D1;
 }
 
 .navbar-default .nav > li>a:hover,
 .navbar-default .nav>li>a:focus:hover {
-    color: rgba(9,79,106,.7);
+    color: #1C68D1;
 }
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: rgba(9,79,106,.7)!important;
+    color: #1C68D1;
     background-color: transparent;
 }
 
