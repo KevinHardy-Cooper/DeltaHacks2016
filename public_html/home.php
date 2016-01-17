@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,7 +52,7 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="nav navbar-nav navbar-header">
                
-                <a id="logo" class="navbar-brand page-scroll" href="#home.html">Let's Talk</a>
+                <a id="logo" class="navbar-brand page-scroll" href="home.php">L e t 's &nbsp; T a l k</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,7 +60,7 @@
                 <ul class="nav navbar-nav navbar-right">
                    
                     <li>
-                        <a id="webname" href="#home.html"class=" navbar-brand page-scroll" >Letstalkaboutthat.com</a><!--TODO-->
+                        <a id="webname" href="home.php"class=" navbar-brand page-scroll" >Letstalkaboutthat.com</a><!--TODO-->
                     </li>
                     
                 </ul>
@@ -117,27 +121,6 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
-
-<script>
-$("#signInButton").click(function() {
-        //get login attempt info
-        //pass to php function to verify exists in JSON
-        var username = $("#username").val();
-        var password = $("#password").val();
-        boolean email;
-        $.ajax({
-            method: 'get',
-            url: 'php/verify.php',
-            data: {
-                'username': username,
-                'password': password
-            },
-            success: function(msg) {
-                //TODO set received token? Go to home.php
-            }
-        });
-    });
-</script>
 </body>
 
 </html>
