@@ -1,6 +1,6 @@
 <?php
-	$username = $_GET['usernameNoun'];
-	$username = $_GET['usernameAdjective'];
+	$usernameNoun = $_GET['usernameNoun'];
+	$usernameAdjective = $_GET['usernameAdjective'];
 	$fName = $_GET['fName'];
 	$lName = $_GET['lName'];
 	$email = $_GET['email'];
