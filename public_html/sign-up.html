@@ -133,7 +133,7 @@
 
 		<div class="select">
     		<span class="arr"></span>
-			<select>
+			<select id="adjective">
   				<option value="Sexy">Sexy</option>
   				<option value="Erotic">Erotic</option>
   				<option value="Alluring">Alluring</option>
@@ -144,7 +144,7 @@
 
 		<div class="select">
     		<span class="arr"></span>
-			<select>
+			<select id="noun">
   				<option value="Erc">Erc</option>
   				<option value="Zebroid">Zebroid</option>
   				<option value="Mantis Shrip">Mantis Shrimp</option>
@@ -153,14 +153,13 @@
 		</div>
 	</div>
 
-	<textarea rows="4" cols="50" maxlength="140">
-		At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. 
+	<textarea rows="4" cols="50" maxlength="140" id = "signUpAchievement">Stuff, Stuff, Stufff...
 	</textarea>
 
 	<form action="">
-	  	<input type="radio" name="gender" value="male" class="gender"> Male<br>
-	  	<input type="radio" name="gender" value="female" class="gender"> Female<br>
-	  	<input type="radio" name="gender" value="other" class="gender"> Other
+	  	<input type="radio" name="gender" value="male" class="gender" id="male"> Male<br>
+	  	<input type="radio" name="gender" value="female" class="gender" id="female"> Female<br>
+	  	<input type="radio" name="gender" value="other" class="gender" id="other"> Not Specified
 	</form>
 
 	<div id="next-button">Next</div>
@@ -170,12 +169,12 @@
 
 <script type="text/javascript">
 	$("#next-button").click(function (){
-	//Grab all data
 		var fName = $("#firstName").val();	
 		var lName = $("#lastName").val();	
 		var email = $("#email").val();	
 		var password = $("#password").val();
-		var username; //TODO Grab from slider/selector?
+		var usernameNoun = $("#noun").val();
+		var usernameAdjective = $("#adjective").val();
 	
 		var aNum = $("#addressNumber").val();
 		var aStr = $("#addressStreet").val();
@@ -185,15 +184,13 @@
 		var aCou = $("#addressCountry").val();
 		var signUpAch = $("#signUpAchievement").val();
 		var gender;
-		if($("#male").attr("checked")) {
+		if($("#male").attr("checked") == true) {
 			gender = "M";
-		} else if($("#female").attr("checked")) {
+		} else if($("#female").attr("checked") == true) {
 			gender = "F";
-		} else if($("#other").attr("checked")) {
+		} else if($("#other").attr("checked") == true) {
 			gender = "O";
-		} else {
-			//TODO Spencer Notify User that northing was clicked, but needs to be.
-		}
+		} 
 	
 		if(fName.length < 1 || fName.length > 255) {
 			moveToError("First Name");
@@ -219,13 +216,14 @@
 		//TODO PHP Validate email
 		//TODO Verify Address
 		//TODO Send Valid stuff to PHP
+		alert("sending!");
 		$.ajax({
 			method: 'get',
-  			url: 'php/signUpScript.php',
+  			url: 'php/signUp.php',
   			data: {
   				'gender': gender,
-    			'fname': fname,
-    			'lname': lname,
+    			'fName': fName,
+    			'lName': lName,
     			'email': email,
     			'password': password,
     			'aNum': aNum,
@@ -235,9 +233,11 @@
     			'aReg': aReg,
     			'aCou': aCou,
     			'signUpAch': signUpAch,
-    			'username': username
+    			'usernameNoun': usernameNoun,
+    			'usernameAdjective': usernameAdjective
   			},
   			success: function(msg) {
+
   			}
 		});
 	});
