@@ -4,10 +4,8 @@ body{
 
 #scrollableForm {
 	width: 60vw;
-	height: 30vw;
 	margin: 0 auto;
 	margin-top: 10vw;
-	overflow: scroll;
 }
 
 .basicForm {
