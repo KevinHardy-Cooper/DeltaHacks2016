@@ -85,7 +85,7 @@
            
 
             <div class="header-content-inner">
-                <h1><i class="fa fa-circle-o fa-5x"></i></h1>
+                <h1><img src="resources/img/avatar-2.png"></h1>
                 <hr>
                 <p class="smallAchievement" id="smallAchievement"> SmallAchievement: </p>
                 <p class="editable" id="smallAchievementEdit"><?php echo $person["SmallAchievement"] ?> </p>
