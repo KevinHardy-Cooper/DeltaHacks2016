@@ -220,7 +220,7 @@
 		//TODO Send Valid stuff to PHP
 		$.ajax({
 			method: 'get',
-  			url: 'php/signUp.php',
+  			url: 'php/signup.php',
   			data: {
   				'gender': gender,
     			'fName': fName,
