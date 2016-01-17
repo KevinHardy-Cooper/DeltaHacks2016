@@ -156,7 +156,7 @@
 
     <script>
 
-    Date lastMessage;
+    /*Date lastMessage;
 
     window.onload = function() {
         lastMessage = new Date();
@@ -182,7 +182,7 @@
         //PHP makes SQL to get new messages
         //Build HTML with PHP, send back here
         //msgBox.write();
-    };
+    };*/
 
     $("#endButton").click(function() {
         var username = $("#userEmail").text();
@@ -194,6 +194,22 @@
             },
             success: function(msg) {
                 alert("Deleted");
+            }
+        });
+    });
+
+    $("#sendButton").click(function() {
+        var username = $("#userEmail").text();
+        var msg = $("#inputTextArea").val();
+        $.ajax({
+            method: 'get',
+            url: 'php/addToLog.php',
+            data: {
+                'username': username,
+                'message': msg
+            },
+            success: function(msg) {
+                alert("Attempted to Add");
             }
         });
     });
