@@ -110,7 +110,7 @@
         var pexp = $("#pexp").val();
         $.ajax({
             method: 'get',
-            url: 'php/verify.php',
+            url: 'php/listener-setter.php',
             data: {
                 'style': style,
                 'type': type,
