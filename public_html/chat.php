@@ -1,3 +1,16 @@
+<?php
+    session_start();
+    $username = $_SESSION["Username"];
+    $con = mysqli_connect("fdb3.awardspace.net","2035081_letstalk","SimplyCoded1","2035081_letstalk","3306");
+    $sql = "SELECT * FROM `2035081_letstalk`.`Person` WHERE `Email` = '". $username ."';";
+    // Check connection
+    if (mysqli_connect_errno()) {
+        echo "Fail";
+    }
+    $result = mysqli_query($con, $sql);
+    $row = mysqli_fetch_assoc($result);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,23 +78,69 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <header>
-                       
+    <header>           
         <div class="header-content">
-           
-
             <div class="header-content-inner">
-                <h1><i class="fa fa-circle-o"></i></h1>
-                <p>desc</p>
             </div>
         </div>
     </header>
 
-   
-         <a id="endConvoButton"  class="btn btn-default" >End Conversation</a>
-          <a id="flagButton" class="btn btn-default" ><i class="fa fa-flag-o"></i></a>
-          <a id="sendButton" href="sign-up.html"  class="btn btn-default" ><i class="fa fa-envelope-o fa-4x"></i></a>
-                   
+
+    <div id="wrapper">
+
+        <div id="leftside">
+            <i class="fa fa-circle-o fa-3x"></i>
+            <p id="userEmail"><?php echo $row["Email"]?></p>
+            <p> You are speaking with </p> 
+
+            <p id="friendEmail">
+
+            <?php 
+            //Get Friends Email, from Conversation Table
+            $findFriend = "SELECT * FROM `2035081_letstalk`.`Log` WHERE `ListenerEmail` = '" . $username . "';";
+            $testResult = mysqli_query($con, $findFriend);
+
+            if (mysqli_num_rows($testResult) > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+                    echo $row["TalkerEmail"];
+                    return;
+                }
+            } else {
+                $findFriend = "SELECT * FROM `2035081_letstalk`.`Log` WHERE `TalkerEmail` = '" . $username . "';";
+                $testResult = mysqli_query($con, $findFriend);
+                if (mysqli_num_rows($testResult) > 0) {
+                    while($row = mysqli_fetch_assoc($result)) {
+                        echo $row["ListenerEmail"];
+                        return;
+                    }
+                } else {
+                    echo "You are not in Conversation with anyone.";
+                }
+            }
+            ?>
+
+            </p> 
+
+        </div>
+
+        <div id="rightside">
+            <div id="msgBoxAndEndRow"> 
+                <div id="msgBox"> </div>
+                <div id="endButton"> <button class="btn sendBtn"> Say Good-Bye! </button> </div>
+            </div>
+            <div id="inputAndSendRow"> 
+                <div id="inputText"> 
+                <textarea rows="5" cols="76" id="inputTextArea" class="form-control"> </textarea>
+                </div>
+                <div id="sendButton"> 
+                <button id="sendMsgButton" class="btn"> <i class="fa fa-envelope-o fa-3x"></i> </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="flag"> <i class="fa fa-flag fa-2x"></i> </div>
+
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -98,85 +157,35 @@
     <script src="js/creative.js"></script>
 
     <script>
-    $("#editButton1").click(function() {
-                $(".editable").attr("contenteditable", true);
-            } 
-                $("#saveButton").html("saveButton");
-                $(".editable").attr("contenteditable", false);
-                $.ajax({
-                    type: "POST",
-                    url: "settings.html",
-                    data: { 
-                            firstName: $("#FirstName").html(),
-                            lastName: $("#LastName").html()
-                            
-                        }
-                }).done(function( msg ) {
-                    //alert(msg);
-                    location.reload();
-                });
+
+    Date lastMessage;
+
+    window.onload = function() {
+        lastMessage = new Date();
+        setInterval(getNewMessages(), 1000);
+    };
+
+    function getNewMessages() {
+        var username = $("#userEmail").text();
+        var friendemail = $("#friendEmail").text();
+        var lastDate = lastMessage;
+        $.ajax({
+            method: 'get',
+            url: 'php/getMessages.php',
+            data: {
+                'username': username,
+                'friendemail': friendemail,
+                'lastDate': lastDate
+            },
+            success: function(msg) {
+                
             }
         });
-    $("#editButton1").click(function() {
-                $(".editable").attr("contenteditable", true);
-            } 
-                $("#saveButton").html("saveButton");
-                $(".editable").attr("contenteditable", false);
-                $.ajax({
-                    type: "POST",
-                    url: "settings.html",
-                    data: { 
-                            firstName: $("#FirstName").html(),
-                            lastName: $("#LastName").html()
-                            
-                        }
-                }).done(function( msg ) {
-                    //alert(msg);
-                    location.reload();
-                });
-            }
-        });
-    $("#editButton2").click(function() {
-                $(".editable").attr("contenteditable", true);
-            } 
-                $("#saveButton").html("saveButton");
-                $(".editable").attr("contenteditable", false);
-                $.ajax({
-                    type: "POST",
-                    url: "settings.html",
-                    data: { 
-                            gender: $("#Gender").html(),                            
-                        }
-                }).done(function( msg ) {
-                    //alert(msg);
-                    location.reload();
-                });
-            }
-        });
-    $("#editButton3").click(function() {
-                $(".editable").attr("contenteditable", true);
-            } 
-                $("#saveButton").html("saveButton");
-                $(".editable").attr("contenteditable", false);
-                $.ajax({
-                    type: "POST",
-                    url: "settings.html",
-                    data: { 
-                            streetNum: $("#StreetNum").html(),
-                            streetName: $("#streetName").html()
-                            city: $("#City").html()
-                            region: $("#Region").html()
-                            country: $("#Country").html()
-                            postalCode: $("#PostalCode").html()
-                            
-                        }
-                }).done(function( msg ) {
-                    //alert(msg);
-                    location.reload();
-                });
-            }
-        });
-</script>
+        //PHP makes SQL to get new messages
+        //Build HTML with PHP, send back here
+        //msgBox.write();
+    }
+    </script>
 
 </body>
 
