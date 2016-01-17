@@ -1,8 +1,7 @@
 <?php
 	$username = $_GET['username'];
 	$password = $_GET['password'];
-
-	$con = mysqli_connect("localhost:8889","root","root","mysql");
+	$con = mysqli_connect("fdb3.awardspace.net","2035081_letstalk","SimplyCoded1","2035081_letstalk","3306");
 
 	// Check connection
 	if (mysqli_connect_errno()) {

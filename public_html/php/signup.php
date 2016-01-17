@@ -103,7 +103,7 @@ $(#signUpButton).click(function (){
 	//$listenerInsertCmd = "INSERT INTO `2035081_letstalk`.`Listener` VALUES (`" . $email . "`, `" . $solver . "`, `" . $listenExp . "`, `" .
 	//	$personalExp . "`, `" . $bluntness . "`);";
 
-	$con = mysqli_connect("localhost:8889","root","root","mysql");
+	$con = mysqli_connect("fdb3.awardspace.net","2035081_letstalk","SimplyCoded1","2035081_letstalk","3306");
 
 	// Check connection
 	if (mysqli_connect_errno()) {
