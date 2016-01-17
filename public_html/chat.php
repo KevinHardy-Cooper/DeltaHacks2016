@@ -101,19 +101,15 @@
             $testResult = mysqli_query($con, $findFriend);
 
             if (mysqli_num_rows($testResult) > 0) {
-                while($row = mysqli_fetch_assoc($result)) {
-                    echo "Fuck Me";
+                while($row = mysqli_fetch_assoc($testResult)) {
                     echo $row["TalkerEmail"];
-                    return;
                 }
             } else {
                 $findFriend = "SELECT * FROM `2035081_letstalk`.`Log` WHERE `TalkerEmail` = '" . $username . "';";
                 $testResult = mysqli_query($con, $findFriend);
                 if (mysqli_num_rows($testResult) > 0) {
-                    while($row = mysqli_fetch_assoc($result)) {
-                        echo "Fuck You";
+                    while($row = mysqli_fetch_assoc($testResult)) {
                         echo $row["ListenerEmail"];
-                        return;
                     }
                 } else {
                     echo "You are not in Conversation with anyone.";
