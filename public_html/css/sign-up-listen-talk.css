@@ -1,26 +1,5 @@
 body{
-	background-color: #1C68D1 !important;
-}
-
-#scrollableForm {
-	width: 60vw;
-	margin: 0 auto;
-	margin-top: 20vw;
-}
-
-.basicForm {
-	margin-bottom: 2vw;
-}
-.addressBlock {
-	margin-bottom: 70px;
-}
-
-#addressCityAndCode {
-	margin-bottom: 115px;
-}
-
-#usernamePicker {
-	height: 10%;
+	background-color: #1C68D1;
 }
 
 #logo{
@@ -80,7 +59,7 @@ body{
 .navbar-default {
     border-color: color: rgba(9,79,106,.7);
     
-    font-family: 'Lobster', cursive;
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     background-color: #fff;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
@@ -89,9 +68,9 @@ body{
 
 .navbar-default .navbar-header .navbar-brand {
     text-transform: uppercase;
-    font-family: 'Lobster', cursive;
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
-	color: #1C68D1;
+    color: rgba(9,79,106,.7);
 }
 
 .navbar-default .navbar-header .navbar-brand:hover,
@@ -121,62 +100,4 @@ body{
 .navbar-default .nav > li.active>a:hover,
 .navbar-default .nav>li.active>a:focus:hover {
     background-color: transparent;
-}
-
-.select {
-  font-size: 16px;
-  position: relative;
-  display: inline-block;
-}
-
-.select select {
-  outline: none;
-  -webkit-appearance: none;
-  display: block;
-  padding: 1.2em 3em 1.3em 1.5em;
-  margin: 0;
-
-  transition: border-color 0.2s;
-  border: 5px solid #EB5168;
-  border-radius: 5px;
-
-  background: #fff;
-  color: #555;
-  line-height: normal;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.select .arr {
-  background: #fff;
-  bottom: 5px;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  width: 50px;
-  pointer-events: none;
-}
-.select .arr:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 24px;
-  margin-top: -5px;
-  pointer-events: none;
-  border-top: 10px solid #EB5168;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-}
-
-.select .arr:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 28px;
-  margin-top: -5px;
-  pointer-events: none;
-  border-top: 6px solid #fff;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
 }

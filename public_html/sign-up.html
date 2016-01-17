@@ -22,13 +22,55 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<!-- Latest compiled and minified JavaScript -->
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 	<!-- Links -->
 	<link rel="stylesheet" type="text/css" href="css/sign-up.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
+
+	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="nav navbar-nav navbar-header">
+               
+                <a id="logo" class="navbar-brand page-scroll" href="#page-top">Let's Talk</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                   
+                    <li>
+                        <a id="webname" href="#page-top"class=" navbar-brand page-scroll" >WebsiteName</a><!--TODO-->
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+
+        <!-- /.container-fluid -->
+       
+    </nav>
+
+	<div id="logo-centered">
+		Let's Talk
+	</div>
+
+	<div id="listen-talk-choices">
+		<div class="listen-talk-choice">Listen</div>
+		<div class="listen-talk-choice">Both</div>
+		<div class="listen-talk-choice">Talk</div>
+	</div>
+
+	<div id="listen-talk-slider">
+		<input type ="range" min ="0" max="2.0" step ="1"/>		
+	</div>
 
 	<div id="scrollableForm">
 
@@ -88,22 +130,33 @@
 			</div>
 		</div>
 
-		<div id="usernamePicker"> 
-			<div class="dropdown">
-  				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    			Adjective
-    				<span class="caret"></span>
-  				</button>
-  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    				<li><a href="#">Action</a></li>
-    				<li><a href="#">Another action</a></li>
-  				</ul>
-			</div>
+
+		<div class="select">
+    		<span class="arr"></span>
+			<select>
+  				<option value="Sexy">Sexy</option>
+  				<option value="Erotic">Erotic</option>
+  				<option value="Alluring">Alluring</option>
+  				<option value="Capricious">Capricious</option>
+  				<!--TODO: Replace with generated function -->
+			</select>
+		</div>
+
+		<div class="select">
+    		<span class="arr"></span>
+			<select>
+  				<option value="Erc">Erc</option>
+  				<option value="Zebroid">Zebroid</option>
+  				<option value="Mantis Shrip">Mantis Shrimp</option>
+  				<option value="Cuttlefish">Cuttlefish</option>
+			</select>
 		</div>
 	</div>
+
+	<div id="next-button">Next</div>
 </body>
 
-<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
 
 <script type="text/javascript">
 	$(#signUpButton).click(function (){
