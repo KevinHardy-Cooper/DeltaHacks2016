@@ -88,27 +88,33 @@
                 <h1><i class="fa fa-circle-o fa-5x"></i></h1>
                 <hr>
                 <p class="smallAchievement" id="smallAchievement"> SmallAchievement: </p>
-                <p class="editable" id="smallAchievementEdit"><?php echo $Person["SmallAchievement"] ?> </p>
+                <p class="editable" id="smallAchievementEdit"><?php echo $person["SmallAchievement"] ?> </p>
                  <p class="desciption" id="description"> Description: </p>
-                 <p class="editable" id="description" ><?php echo $Person["Description"] ?> </p>
+                 <p class="editable" id="description" ><?php echo $person["Description"] ?> </p>
                 
             </div>
         </div>
     </header>
 <div class="tableHeading">
 <p>First Name:</p>
+<<<<<<< HEAD
 <p class="editable" id="firstName"><?php echo $Person["FirstName"]?></p>
 <p>Last Name:</p>
     <p class="editable" id="lastName"><?php echo $Person["LastName"]?></p>
+=======
+<p class="editable" id="firstNameEdit"><?php echo $person["FirstName"]?></p>
+<p>Last Name:</p>
+    <p class="editable" id="lastNameEdit"><?php echo $person["LastName"]?></p>
+>>>>>>> origin/master
             <p id="editButton1"  class="btn btn-default" ><i class="fa fa-pencil"></i></p>
 
 </div>
 
 <div class="tableHeading1">
 <p>Gender:</p>
-    <p class="editable" id="gender"><?php echo $Person["Gender"]?></p>
+    <p class="editable" id="gender"><?php echo $person["Gender"]?></p>
 <p>Email:</p>
-    <p id="email"><?php echo $Person["Email"]?></p>
+    <p id="email"><?php echo $person["Email"]?></p>
              <p id="editButton2"  class="btn btn-default" ><i class="fa fa-pencil"></i></p>
 
 </div>

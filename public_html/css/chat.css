@@ -232,6 +232,7 @@ header .header-content .header-content-inner p {
 
 #msgBox {
     height: 100%;
+    overflow: scroll;
     width: 80%;
     float: left;
     background-color: white;
