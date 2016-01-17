@@ -90,7 +90,7 @@
 
         <div id="leftside">
             <i class="fa fa-circle-o fa-3x"></i>
-            <p id="userEmail"><?php echo $row["Email"]?></p>
+            <p id="userEmail"><?php echo $username?></p>
             <p> You are speaking with </p> 
 
             <p id="friendEmail">
@@ -102,6 +102,7 @@
 
             if (mysqli_num_rows($testResult) > 0) {
                 while($row = mysqli_fetch_assoc($result)) {
+                    echo "Fuck Me";
                     echo $row["TalkerEmail"];
                     return;
                 }
@@ -110,6 +111,7 @@
                 $testResult = mysqli_query($con, $findFriend);
                 if (mysqli_num_rows($testResult) > 0) {
                     while($row = mysqli_fetch_assoc($result)) {
+                        echo "Fuck You";
                         echo $row["ListenerEmail"];
                         return;
                     }
