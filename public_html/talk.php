@@ -130,71 +130,18 @@ eg.
 
                    </form>-->
                    <!-- Large button group -->
-<div class="btn-group">
-  <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<div class="dropdown">
+  <button id="dLabel "type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Topics<span class="caret"></span>
   </button>
-  <ul class="dropdown-menu">
+  <ul class="dropdown-menu dropdown-toggle" aria-labelledby="dLabel">
     <li><a href='talkHome.php?topic=Rant'>Rant</a></li>
     <li><a href='talkHome.php?topic=Abuse/Violence'>Abuse/Violence</a></li>
     <li><a href='talkHome.php?topic=Addictions'>Addictions</a></li>
     <li><a href='talkHome.php?topic=Anger Management'>Anger Maanagement</a></li>
     <li><a href='talkHome.php?topic=Another Perspective'>Another Perspective</a></li>
-
   </ul>
 </div>
-<!--
-                   <form action="talkHome.php" method="GET">
-                    <select name="topics" ]>
-                      <option selected>Rant</option>
-                      <option>Abuse/Violence</option>
-                      <option>Addictions</option>
-                      <option>Anger Management</option>
-                      <option>Another Perspective</option>
-                      <!--<option>Child Birth</option>
-                      <option>Clinical Disorder</option>
-                      <option>Death of a Loved One</option>
-                      <option>Depression</option>
-                      <option>Divorce</option>
-                      <option>Eating Disorder</option>
-                      <option>Emotional Distress</option>                      
-                      <option>Gender Orientation</option>
-                      <option>Home Life</option>
-                      <option>Jealousy</option>
-                      <option>Job Improvement</option>
-                      <option>Marriage</option>
-                      <option>Overcome Fear</option>
-                      <option>Post Traumatic Stress Disorder</option>
-                      <option>Relationship Improvement</option>
-                       <option>Self Exploration</option>
-                      <option>Sexuality</option>
-                      <option>Sexual Dysfunction</option>
-                      <option>Social Anxiety</option>
-                      <option>Sterility</option>
-                      <option>Abuse/Violence</option>
-                      <option>Work Life</option>
-                      <option>Stress</option>
-                    </select>
-                    <noscript><input type="submit" formmethod="post" value="Submit"></noscript>
-                   </form>
-                  -->
-<script language="JavaScript">
-  function processUser()
-  {
-    var parameters = location.search;
-    document.getElementById("topics").innerHTML = l;
-  }
-</script>
-
-
-                 </div>
-                </div>
-            </div>
-        </div>
-
-
-    </header>
-
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -209,6 +156,7 @@ eg.
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 <script type="text/javascript">
 function submit(){
   var obj=document.getElementById("topicForm");
