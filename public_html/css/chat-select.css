@@ -53,14 +53,28 @@ body{
     background-color: #9DC6CD;
 }
 
+.container-fluid{
+    background-color: #015938;
+}
+
 #profile-sidebar{
     float: left;
     height: 100vh;
     width:25%;
+    min-width: 25%;
     background-color: #9DC6CD;
     color: #3F4D84;
 }
 
-.container-fluid{
-    background-color: #015938;
+#profile-picture{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vw;
+    height: 13vw;
+    width: 13vw;
+}
+
+img{
+    width: 13vw;
 }

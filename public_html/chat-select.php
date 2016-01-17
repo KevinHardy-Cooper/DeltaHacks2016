@@ -1,3 +1,16 @@
+<?php
+	start_session();
+	$username = $_SESSION["Username"];
+	$con = mysqli_connect("fdb3.awardspace.net","2035081_letstalk","SimplyCoded1","2035081_letstalk","3306");
+	$sql = "SELECT * FROM `2035081_letstalk`.`Person` WHERE `Email` = '". $username ."';";
+	// Check connection
+	if (mysqli_connect_errno()) {
+		echo "Fail";
+	}
+	$result = mysqli_query($con, $sql);
+	$row = mysqli_fetch_assoc($result);
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -60,6 +73,14 @@
     <div id="profile-sidebar">
     	<div id="profile-picture">
     		<img src="img/avatar-2.png">
+    	</div>
+
+    	<div id="description">
+    		
+    	</div>
+
+    	<div id="achievement">
+    		<?php echo $row["Email"]?>
     	</div>
     </div>
 
