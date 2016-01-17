@@ -131,10 +131,10 @@
 			<div class="select">
 	    		<span class="arr"></span>
 				<select id="adjective" class="usernameDrop">
-	  				<option value="Sexy">Sexy</option>
-	  				<option value="Erotic">Erotic</option>
-	  				<option value="Alluring">Alluring</option>
-	  				<option value="Capricious">Capricious</option>
+	  				<option value="Sexy">Altruistic</option>
+	  				<option value="Erotic">Jubilant</option>
+	  				<option value="Alluring">Pragmatic</option>
+	  				<option value="Capricious">Sublime</option>
 	  				<!--TODO: Replace with generated function -->
 				</select>
 			</div>
@@ -142,8 +142,8 @@
 			<div class="select">
 	    		<span class="arr"></span>
 				<select id="noun" class="usernameDrop">
-	  				<option value="Erc">Erc</option>
-	  				<option value="Zebroid">Zebroid</option>
+	  				<option value="Lemur">Lemur</option>
+	  				<option value="Frog">Frog</option>
 	  				<option value="Mantis Shrip">Mantis Shrimp</option>
 	  				<option value="Cuttlefish">Cuttlefish</option>
 				</select>
@@ -256,7 +256,7 @@
             			method: 'get',
             			url: 'php/verify.php',
             			data: {
-              				'username': username,
+              				'username': email,
                 			'password': password
             			},
             		success: function(msg) {
