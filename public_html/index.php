@@ -1,24 +1,3 @@
-<?php
-    start_session();
-    $username = $_SESSION["Username"];
-    $con = mysqli_connect("fdb3.awardspace.net","2035081_letstalk","SimplyCoded1","2035081_letstalk","3306");
-    $sql = "SELECT * FROM `2035081_letstalk`.`Person` WHERE `Email` = '". $username ."';";
-
-    echo $username;
-    if(!is_null($username)){
-        //Send to home.php
-    }
-    // Check connection
-    if (mysqli_connect_errno()) {
-        echo "Fail";
-    }
-    $result = mysqli_query($con, $sql);
-    $row = mysqli_fetch_assoc($result);
-?>
-
-eg.
-<?php echo $row["FirstName"]?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -104,7 +83,7 @@ eg.
                     </div>
                   </form>
 
-                <a id="signInButton" href="#signin" class="btn btn-primary btn-xl page-scroll">Sign In</a>
+                <a id="signInButton" href="signin" class="btn btn-primary btn-xl page-scroll">Sign In</a>
             </div>
         </div>
     </header>
