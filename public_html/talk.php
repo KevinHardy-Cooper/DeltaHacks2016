@@ -129,14 +129,29 @@ eg.
                     <input type="submit"</input>
 
                    </form>-->
-                   <form action="talkHome.html" method="GET">
-                    <select name="topics">
+                   <!-- Large button group -->
+<div class="btn-group">
+  <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Topics<span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href='talkHome.php?topic=Rant'>Rant</a></li>
+    <li><a href='talkHome.php?topic=Abuse/Violence'>Abuse/Violence</a></li>
+    <li><a href='talkHome.php?topic=Addictions'>Addictions</a></li>
+    <li><a href='talkHome.php?topic=Anger Management'>Anger Maanagement</a></li>
+    <li><a href='talkHome.php?topic=Another Perspective'>Another Perspective</a></li>
+
+  </ul>
+</div>
+<!--
+                   <form action="talkHome.php" method="GET">
+                    <select name="topics" ]>
                       <option selected>Rant</option>
                       <option>Abuse/Violence</option>
                       <option>Addictions</option>
                       <option>Anger Management</option>
                       <option>Another Perspective</option>
-                      <option>Child Birth</option>
+                      <!--<option>Child Birth</option>
                       <option>Clinical Disorder</option>
                       <option>Death of a Loved One</option>
                       <option>Depression</option>
@@ -162,7 +177,7 @@ eg.
                     </select>
                     <noscript><input type="submit" formmethod="post" value="Submit"></noscript>
                    </form>
-                  
+                  -->
 <script language="JavaScript">
   function processUser()
   {
