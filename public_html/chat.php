@@ -182,7 +182,7 @@
         //PHP makes SQL to get new messages
         //Build HTML with PHP, send back here
         //msgBox.write();
-    }
+    };
 
     $("#endButton").click(function() {
         var username = $("#userEmail").text();
