@@ -72,13 +72,13 @@
        
     </nav>
                 <div id="talk">
-                    <a href="talk.html" class="portfolio-box">
+                    <a href="talk.php" class="portfolio-box">
                     <i id="talkIcon"class="fa fa-comment big-icon" ></i>
                      <p id="talkCaption">Talk</p>          
                     </a>
                 </div>
                 <div id="listen">
-                    <a href="listen.html" class="portfolio-box">
+                    <a href="listen.php" class="portfolio-box">
                     
                                     <i id="listenIcon" class="fa fa-headphones big-icon"></i>
                                     <p id="listenCaption">Listen</p>
@@ -86,7 +86,7 @@
                     </a>
                 </div>
                  <div id="community">
-                    <a href="community.html" class="portfolio-box">
+                    <a href="community.php" class="portfolio-box">
                        
                                     <i id="communityIcon" class="fa fa-users big-icon"></i>
                                     <p id="communityCaption">Community</p>
@@ -95,7 +95,7 @@
                 </div>
             </div>
                 <div id="settings">
-                    <a href="settings.html" class="portfolio-box">
+                    <a href="settings.php" class="portfolio-box">
                       
                                     <i id="settingsIcon" class="fa fa-cogs big-icon"></i>
                                     <p id="settingsCaption">Settings</p>

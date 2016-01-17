@@ -79,7 +79,7 @@
 
 <script>
 $("#next-button").click(function(){
-	window.location.href = "sign-up.html";
+	window.location.href = "sign-up.php";
 	// TODO: Grab slider data, send to database
 });
 </script>

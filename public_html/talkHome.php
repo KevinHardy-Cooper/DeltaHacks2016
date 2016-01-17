@@ -61,7 +61,7 @@ eg.
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                
-                <a id="logo" class="navbar-brand page-scroll" href="#index.html">LOGO</a>
+                <a id="logo" class="navbar-brand page-scroll" href="index.php">LOGO</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -69,7 +69,7 @@ eg.
                 <ul class="nav navbar-nav navbar-right">
                    
                     <li>
-                        <a id="webname" class="page-scroll" href="index.html" >WebsiteName</a><!--TODO-->
+                        <a id="webname" class="page-scroll" href="index.php" >WebsiteName</a><!--TODO-->
                     </li>
                 </ul>
             </div>

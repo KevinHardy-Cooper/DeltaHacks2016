@@ -96,7 +96,7 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                
-                <a id="logo" class="navbar-brand page-scroll" href="settings.html">LOGO</a>
+                <a id="logo" class="navbar-brand page-scroll" href="settings.php">LOGO</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -104,7 +104,7 @@
                 <ul class="nav navbar-nav navbar-right">
                    
                     <li>
-                        <a id="webname" class="page-scroll" href="settings.html" >WebsiteName</a><!--TODO-->
+                        <a id="webname" class="page-scroll" href="settings.php" >WebsiteName</a><!--TODO-->
                     </li>
                 </ul>
             </div>
@@ -168,7 +168,7 @@
     <section>
          <a id="saveButton"  class="btn btn-default" >Save</a>
           <a id="discardButton" class="btn btn-default" >Discard</a>
-          <a id="becomeListenerButton" href="sign-up.html"  class="btn btn-default" >Become A Listener!</a>
+          <a id="becomeListenerButton" href="sign-up.php"  class="btn btn-default" >Become A Listener!</a>
                    
     </section>
 

@@ -46,7 +46,7 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                
-                <a id="logo" class="navbar-brand page-scroll" href="#index.html">L e t 's &nbsp; T a l k</a>
+                <a id="logo" class="navbar-brand page-scroll" href="index.php">L e t 's &nbsp; T a l k</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -54,7 +54,7 @@
                 <ul class="nav navbar-nav navbar-right">
                    
                     <li>
-                        <a id="webname" class="page-scroll" href="index.html" >letstalkaboutthat.com</a><!--TODO-->
+                        <a id="webname" class="page-scroll" href="index.php" >letstalkaboutthat.com</a><!--TODO-->
                     </li>
                 </ul>
             </div>
@@ -62,7 +62,7 @@
         </div>
 
         <!-- /.container-fluid -->
-         <a id="signUpButton" href="sign-up.html" class="btn btn-default" >Sign Up</a>
+         <a id="signUpButton" href="sign-up.php" class="btn btn-default" >Sign Up</a>
     </nav>
 
     <header>
