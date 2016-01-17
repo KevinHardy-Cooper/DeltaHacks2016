@@ -43,7 +43,7 @@
 <body id="page-top">
     <?php
        $username=$_SESSION["Username"];
-       $con=mysqli_connect("localhost:8889", "root", "root", "mysql");
+       $con = mysqli_connect("fdb3.awardspace.net","2035081_letstalk","SimplyCoded1","2035081_letstalk","3306");
 
        //Check connection
        if(mysqli_connect_errno()){
@@ -57,9 +57,6 @@
     ?>
 
     <?php
-    $servername = "localhost";                                                              //Web server credentials to make connection
-    $username = "chrism12_admin";
-    $password = "roots";
     $smallAchievement = mysql_escape_string($_POST['SmallAchievement']);                                          //Retrieve patient information to be updated
     $description = mysql_escape_string($_POST['Description']);                                          //Retrieve patient information to be updated
 
@@ -72,7 +69,7 @@
      $region = mysql_escape_string($_POST['Region']);
      $country = mysql_escape_string($_POST['Country']);
      $postalCode = mysql_escape_string($_POST['PostalCode']);                                                                                       // Create connection
-    $conn = mysqli_connect($servername, $username, $password, "chrism12_mysql");
+    $con = mysqli_connect("fdb3.awardspace.net","2035081_letstalk","SimplyCoded1","2035081_letstalk","3306");
                                                                                             // Check connection
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
