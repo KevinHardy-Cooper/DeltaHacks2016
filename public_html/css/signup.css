@@ -1,0 +1,326 @@
+body {
+background-color: #236BA2;
+}
+
+#errorNotice {
+  width: 100vw;
+  height: 4vw;
+  background-color: #3333B0;
+  position: fixed;
+  top: -4vw;
+  z-index: 2;
+}
+
+#errorNotice p {
+  color: white;
+  font-size: 1.4em;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding-top:1%;
+}
+
+#banner {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+
+.bannerItem {
+  width: 50%;
+  height: 4vw;
+  background-color: white;
+  float: left;
+  padding: 1%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+}
+
+#leftSide p {
+  width: 15%;
+  margin-right: 35%;
+}
+
+#banner #leftSide p:hover {
+  color: #3333B0;
+  cursor: pointer;
+}
+
+#banner #rightSide {
+  text-align: right;
+  color: #3333B0;
+}
+
+#rightSide p {
+  width: 20%;
+  float: right;
+}
+
+#banner #rightSide p:hover {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.mainframe {
+  width:64vw;
+  height: 35vw;
+  margin: 10vw 18vw 0 18vw;
+  /*background-color: rgba(122,122,122,0.5);*/
+}
+
+#mainFrame1 {
+
+}
+
+.option {
+  width: 26%;
+  height: 60%;
+  margin: 8% 3.6%;
+  float: left;
+  background-color: #CCC;
+  border-radius: 5%;
+  overflow: scroll;
+}
+
+.option i {
+  width: 100%;
+  font-size: 10em;
+  text-align: center;
+  padding-top: 7%;
+}
+
+.option p {
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 3%;
+}
+
+.option:hover p {
+  color: #07416E;
+  cursor: pointer;
+}
+
+.next {
+  width: 20vw;
+  height: 5vw;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: -2vw;
+  border-radius: 5%;
+}
+
+.next p {
+  width: 100%;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 3em;
+  color: #07416E;
+}
+
+.next p:hover {
+  cursor: pointer;
+  color: #236BA2;
+}
+
+#mainFrame2 {
+  /*background-color: red;*/
+  z-index: 0;
+}
+
+#scrollableForm {
+	width: 60vw;
+	margin: 0 auto;
+	margin-top: 20vw;
+  overflow: scroll;
+}
+
+.pageScroll{
+  cursor: hand;
+  cursor: pointer;
+}
+
+.navbar-brand{
+  cursor: hand;
+  cursor: pointer;
+}
+
+.basicForm {
+	margin-bottom: 2vw;
+  z-index: 0;
+}
+.addressBlock {
+	margin-bottom: 70px;
+}
+
+#addressCityAndCode {
+	margin-bottom: 115px;
+}
+
+#usernamePicker {
+	height: 10%;
+}
+
+#logo{
+	font-family: 'Lobster', cursive;
+	color: #1C68D1;
+}
+
+#logo-centered{
+	margin: 0 auto;
+	margin-top: 250px;
+	width: 50vw;
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	font-size: 5vw;
+	color: white;
+}
+
+.listen-talk-choice{
+	display: inline-block;
+	width: 32.7%;
+	text-align: center;
+	font-size: 1.75vw;
+	color: white;
+}
+
+#listen-talk-choices{
+	margin: 0 auto;
+	width: 50vw;
+}
+
+#listen-talk-slider{
+	margin: 0 auto;
+	height: 100px;
+	width: 30vw;
+}
+
+.select {
+  float: left;
+  width: 20%;
+  margin: 0% 15%;
+  font-size: 3em;
+}
+
+textarea{
+  clear: both;
+  display: block;
+  width: 60vw;
+  margin: 0 auto;
+  resize: none;
+}
+
+form{
+  width: 20vw;
+  margin: 0 45vw;
+  color: white;
+  font-size: 1.25em;
+}
+
+form input {
+  width: 30%;
+  float: left;
+  text-align: center;
+}
+
+
+#mainFrame3 {
+  height: 60vw;
+  padding-top: 10vw;
+  margin: 5vw auto;
+}
+
+#title{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5.5vw;
+	text-align: center;
+	color: white;
+	font-size: 4em;
+	font-family: 'Pacifico', cursive;
+}
+
+#slider-wrapper{
+	margin-top: 4vw;
+}
+
+.att-title{
+	display: inline-block;
+	color: white;
+	width: 10vw;
+	margin-left: 7vw;
+	margin-right: 5vw;
+	vertical-align: top;
+}
+
+#slider{
+	margin: 0 auto;
+	height: 150px;
+	width: 40vw;
+}
+
+.bar-values-left{
+	display: inline-block;
+	color: white;
+	text-align: left;
+	width: 49%;
+}
+
+.bar-values-right{
+	display: inline-block;
+	color: white;
+	text-align: right;
+	width: 49%;
+}
+
+#passive-solver-section{
+	display: block;
+	width: 60vw;
+	margin: 0 auto;
+}
+
+#passive-solver-slider{
+	display: inline-block;
+	margin: 0 auto;
+	height: 100px;
+	width: 30vw;
+}
+
+#gentle-blunt-section{
+	display: block;
+	width: 60vw;
+	margin: 0 auto;
+}
+
+#gentle-blunt-slider{
+	display: inline-block;
+	margin: 0 auto;
+	height: 100px;
+	width: 30vw;
+}
+
+#listening-experience-section{
+display: block;
+width: 60vw;
+margin: 0 auto;
+}
+
+#listening-experience-slider{
+	display: inline-block;
+	margin: 0 auto;
+	height: 100px;
+	width: 30vw;
+}
+
+#personal-experience-section{
+display: block;
+width: 60vw;
+margin: 0 auto;
+}
+
+#personal-experience-slider{
+	display: inline-block;
+	margin: 0 auto;
+	height: 100px;
+	width: 30vw;
+}

@@ -1,244 +1,158 @@
 <?php
-    session_start();
-    $username=$_SESSION["Username"];
-    echo $username;
-    $con = mysqli_connect("fdb3.awardspace.net","2035081_letstalk","SimplyCoded1","2035081_letstalk","3306");
+session_start();
+$username = "";
+$username = $_SESSION["Username"];
+if($username == "") {
+  //redirect
+  header ('Location: index.php');
+}
+$con = mysqli_connect("localhost","root","root","LetsTalk","8889");
+// Check connection
+if (!$con) {
+  echo "Fail";
+}
 
-    //Check connection
-    if(mysqli_connect_errno()){
-        echo"Fail";
-    }
-    $sql="SELECT * FROM `2035081_letstalk`.`Person` WHERE `Email` = '". $username . "';";
-    $result=mysqli_query($con, $sql);
-    $person = $result->fetch_assoc();
+$sql = "SELECT * FROM `LetsTalk`.`Person` WHERE `Email` = '" . $username . "';";
+$result = mysqli_query($con, $sql);
+$row = mysqli_fetch_assoc($result);
+
+/*To Access UserData, use <p class="userData"><?php echo $row["AttributeNameHere"]; ?></p> */
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
+  <title> #Name | Powered by SimplyCoded </title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+  integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+  crossorigin="anonymous">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <!-- Optional theme -->
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+  integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+  crossorigin="anonymous">
 
-    <title>Settings</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-    <!-- Bootstrap Core CSS -->
+  <!-- Font Begins... -->
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-    <!-- Custom Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
-
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/settings.css" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!--for text forms-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+  <!-- Latest compiled and minified JavaScript -->
+  <script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+  integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+  crossorigin="anonymous">
+  </script>
+  <link href="css/settings.css" rel="stylesheet">
 </head>
 
-<body id="page-top">
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-               
-                <a id="logo" class="navbar-brand page-scroll" href="settings.php">LOGO</a>
-            </div>
+<body>
+  <div id="banner">
+    <div id="leftSide" class="bannerItem">
+      <p> Let's Talk </p>
+    </div>
+    <div id="rightSide" class="bannerItem">
+      <p> Help Guide </p>
+    </div>
+  </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                   
-                    <li>
-                        <a id="webname" class="page-scroll" href="settings.php" >WebsiteName</a><!--TODO-->
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
+  <div id="editForm">
+    <p class="formHeading"> Username </p>
+    <p class="userData"><?php echo $row["UserAdjective"]; echo " "; echo $row["UserNoun"];  ?></p>
+    <p class="formHeading col-md-6" data-attrType="fName"> First Name <i class="fa fa-pencil"></i> </p>
+    <p class="formHeading col-md-6" data-attrType="lName"> Last Name <i class="fa fa-pencil"></i></p>
+    <p class="userData col-md-6" data-attrType="fNameEdit"><?php echo $row["FirstName"]; ?></p>
+    <p class="userData col-md-6" data-attrType="lNameEdit"><?php echo $row["LastName"]; ?></p>
+    <p class="formHeading" data-attrType="gender"> Gender <i class="fa fa-pencil"></i></p>
+    <p class="userData" data-attrType="genderEdit"><?php echo $row["Gender"]; ?></p>
+    <p class="formHeading"> Email </p>
+    <p class="userData"><?php echo $row["Email"]; ?></p>
+    <p class="formHeading col-md-6" data-attrType="aNumber"> Number <i class="fa fa-pencil"></i></p>
+    <p class="formHeading col-md-6" data-attrType="aStreet"> Street <i class="fa fa-pencil"></i></p>
+    <p class="userData col-md-6" data-attrType="aNumberEdit"><?php echo $row["StreetNum"]; ?></p>
+    <p class="userData col-md-6" data-attrType="aStreetEdit"><?php echo $row["StreetName"]; ?></p>
+    <p class="formHeading col-md-6" data-attrType="aCity"> City <i class="fa fa-pencil"></i></p>
+    <p class="formHeading col-md-6" data-attrType="aRegion"> Region <i class="fa fa-pencil"></i></p>
+    <p class="userData col-md-6" data-attrType="aCityEdit"><?php echo $row["City"]; ?></p>
+    <p class="userData col-md-6" data-attrType="aRegionEdit"><?php echo $row["Region"]; ?></p>
+    <p class="formHeading col-md-6" data-attrType="aPostal"> Postal Code <i class="fa fa-pencil"></i></p>
+    <p class="formHeading col-md-6" data-attrType="aCountry"> Country <i class="fa fa-pencil"></i></p>
+    <p class="userData col-md-6" data-attrType="aPostalEdit"><?php echo $row["PostalCode"]; ?></p>
+    <p class="userData col-md-6" data-attrType="aCountryEdit"><?php echo $row["Country"]; ?></p>
+    <p class="formHeading" data-attrType="smallAch"> Your Small Achievement of the Day <i class="fa fa-pencil"></i></p>
+    <p class="userData" data-attrType="smallAchEdit"><?php echo $row["SmallAchievement"]; ?></p>
 
-        <!-- /.container-fluid -->
-    </nav>
+    <button id="becomeListen" class="btn btn-info">Become a Listener </button>
+    <div id="saveButtonRow">
+      <button class="col-md-5 btn btn-primary"> Save </button>
+      <button class="col-md-5 btn btn-danger" id="cancelChanges"> Cancel </button>
+    </div>
 
-    <header>
-                       
-        <div class="header-content">
-           
-
-            <div class="header-content-inner">
-                <h1><img src="resources/img/avatar-2.png"></h1>
-                <hr>
-                <p class="smallAchievement" id="smallAchievement"> SmallAchievement: </p>
-                <p class="editable" id="smallAchievementEdit"><?php echo $person["SmallAchievement"] ?> </p>
-                 <p class="desciption" id="description"> Description: </p>
-                 <p class="editable" id="description" ><?php echo $person["Description"] ?> </p>
-                
-            </div>
-        </div>
-    </header>
-<div class="tableHeading">
-<p>First Name:</p>
-<<<<<<< HEAD
-<p class="editable" id="firstName"><?php echo $Person["FirstName"]?></p>
-<p>Last Name:</p>
-    <p class="editable" id="lastName"><?php echo $Person["LastName"]?></p>
-=======
-<p class="editable" id="firstNameEdit"><?php echo $person["FirstName"]?></p>
-<p>Last Name:</p>
-    <p class="editable" id="lastNameEdit"><?php echo $person["LastName"]?></p>
->>>>>>> origin/master
-            <p id="editButton1"  class="btn btn-default" ><i class="fa fa-pencil"></i></p>
-
-</div>
-
-<div class="tableHeading1">
-<p>Gender:</p>
-    <p class="editable" id="gender"><?php echo $person["Gender"]?></p>
-<p>Email:</p>
-    <p id="email"><?php echo $person["Email"]?></p>
-             <p id="editButton2"  class="btn btn-default" ><i class="fa fa-pencil"></i></p>
-
-</div>
-   
-   <div class="tableHeading2">
-<p>StreetNum:</p>
-    <p class="editable" id="streetNum"><?php echo $person["StreetNum"]?></p>
-<p>StreetName:</p>
-    <p class="editable" id="streetName"><?php echo $person["StreetName"]?></p>
-    <p>City:</p>
-    <p class="editable" id="city"><?php echo $person["City"]?></p>
-<p>Region:</p>
-    <p class="editable" id="region"><?php echo $person["Region"]?></p>
-    <p>Country:</p>
-    <p class="editable" id="country"><?php echo $person["Country"]?></p>
-<p>Postal Code:</p>
-    <p class="editable" id="postalCode"><?php echo $person["PostalCode"]?></p>
-             <p id="editButton3"  class="btn btn-default" ><i class="fa fa-pencil"></i></p>
-
-</div>
-   
-    <section>
-         <a id="saveButton"  class="btn btn-default" >Save</a>
-          <a id="discardButton" class="btn btn-default" >Discard</a>
-          <a id="becomeListenerButton" href="sign-up.php"  class="btn btn-default" >Become A Listener!</a>
-                   
-    </section>
-
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.fittext.js"></script>
-    <script src="js/wow.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/creative.js"></script>
-
-    <script>
-    $("#editButton1").click(function() {
-                $(".editable").attr("contenteditable", true);
-            } 
-                $("#saveButton").html("saveButton");
-                $(".editable").attr("contenteditable", false);
-                $.ajax({
-                    type: "POST",
-                    url: "settings.html",
-                    data: { 
-                            firstName: $("#FirstName").html(),
-                            lastName: $("#LastName").html()
-                            
-                        }
-                }).done(function( msg ) {
-                    //alert(msg);
-                    location.reload();
-                });
-            }
-        });
-    $("#editButton1").click(function() {
-                $(".editable").attr("contenteditable", true);
-            } 
-                $("#saveButton").html("saveButton");
-                $(".editable").attr("contenteditable", false);
-                $.ajax({
-                    type: "POST",
-                    url: "settings.html",
-                    data: { 
-                            firstName: $("#FirstName").html(),
-                            lastName: $("#LastName").html()
-                            
-                        }
-                }).done(function( msg ) {
-                    //alert(msg);
-                    location.reload();
-                });
-            }
-        });
-    $("#editButton2").click(function() {
-                $(".editable").attr("contenteditable", true);
-            } 
-                $("#saveButton").html("saveButton");
-                $(".editable").attr("contenteditable", false);
-                $.ajax({
-                    type: "POST",
-                    url: "settings.html",
-                    data: { 
-                            gender: $("#Gender").html(),                            
-                        }
-                }).done(function( msg ) {
-                    //alert(msg);
-                    location.reload();
-                });
-            }
-        });
-    $("#editButton3").click(function() {
-                $(".editable").attr("contenteditable", true);
-            } 
-                $("#saveButton").html("saveButton");
-                $(".editable").attr("contenteditable", false);
-                $.ajax({
-                    type: "POST",
-                    url: "settings.html",
-                    data: { 
-                            streetNum: $("#StreetNum").html(),
-                            streetName: $("#streetName").html()
-                            city: $("#City").html()
-                            region: $("#Region").html()
-                            country: $("#Country").html()
-                            postalCode: $("#PostalCode").html()
-                            
-                        }
-                }).done(function( msg ) {
-                    //alert(msg);
-                    location.reload();
-                });
-            }
-        });
-</script>
-
+  </div>
 </body>
 
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script>
+//TODO Decide what is able to be edited
+//TODO make button listeners for first 2 of 3 buttons
+//TODO insert img for user at top of form
+$(".formHeading").click(function() {
+  var attr = this.getAttribute("data-attrType");
+  $("p[data-attrType='"+attr+"Edit']").addClass("editable").attr("contenteditable","true");
+  switch (attr) {
+    case "fName":
+    //TODO maybe delete switch/case? idk...
+      break;
+    case "lName":
+
+      break;
+    case "gender":
+
+      break;
+    case "aNumber":
+
+      break;
+    case "aStreet":
+
+    break;
+    case "aCity":
+
+    break;
+    case "aRegion":
+
+    break;
+    case "aPostal":
+
+    break;
+
+    case "aCountry":
+
+    break;
+    case "smallAch":
+
+    break;
+    default:
+      console.log("Form heading clicked, should not be editable.");
+  }
+});
+
+
+$("#cancelChanges").click(function() {
+  $(".userData").removeClass("editable").attr("contenteditable","false");
+  location.reload();
+});
+
+$("#leftSide").click(function() {
+  $("#cancelChanges").click();
+  window.location.href = "home.php";
+});
+
+
+</script>
 </html>
