@@ -78,8 +78,51 @@
 	</div>
 
 	<div id="listenerContainer">
-		
+		<div class="listener col-md-5">
+
+		</div>
+		<div class="col-md-2">
+
+		</div>
+		<div class="listener col-md-5">
+
+		</div>
 	</div>
+	<i class="fa fa-spinner fa-spin spinner"></i>
 </body>
+
+<script>
+
+$(document).ready(function() {
+	var username = <?php echo '"' . $username .'"';?>;
+	var tags = [
+		<?php
+		$trigger = 1;
+		foreach ($chosenTags as $key) {
+			if(!$trigger) {
+				echo ",";
+			} else {
+				$trigger = 0;
+			}
+			echo '"' + $key + '"';
+
+		}
+		?>
+	];
+});
+//on doc ready
+	//send username and tags to algo ryth
+	//recieve divs, place in listener container
+	/*ex.
+
+	<div class"listener col-md-5">
+		<img src="..." alt="..." />
+		<p> $Username </p>
+		<p> $Small Ach </p>
+		<p> $Stars </p>
+	</div>
+
+	*/
+</script>
 
 </html>

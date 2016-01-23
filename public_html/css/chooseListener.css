@@ -5,6 +5,7 @@ background-color: #236BA2;
 #banner {
   position: fixed;
   width: 100vw;
+  z-index: 1;
 }
 
 .bannerItem {
@@ -47,6 +48,7 @@ background-color: #236BA2;
   position: fixed;
   top: 7vw;
   margin: 0 auto;
+  z-index: 1;
 }
 
 #fixedHeader p {
@@ -75,12 +77,23 @@ background-color: #236BA2;
 }
 
 #listenerContainer {
-  width: 84%;
+  width: 80%;
   margin: 0 auto;
-  padding-top: 16vw; 
-  height: 200vh;
+  padding-top: 16vw;
 }
 
 .listener {
     background-color: red;
+    height: 32vw;
+}
+
+#spinnerHolder {
+  width: 100%;
+  
+}
+
+.spinner {
+  width: 100%;
+  text-align: center;
+  font-size: 3em;
 }
