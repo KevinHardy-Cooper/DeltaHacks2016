@@ -10,4 +10,9 @@ All Source Code:
 * Change web links to local links.
 * Change references to new page names.
 * See TO-DOs..
+* Add Better Experience for Mobile Users (CSS)
 
+
+Database Changes:
+* Add Small Ach. Data to prompt new Small Ach's, Change ALL code to match
+* Add Description in Database, length/type currently unknown, Change ALL code to match`

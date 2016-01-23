@@ -1,0 +1,65 @@
+body {
+background-color: #236BA2;
+}
+
+#banner {
+  position: fixed;
+  width: 100vw;
+}
+
+.bannerItem {
+  width: 50%;
+  height: 4vw;
+  background-color: white;
+  float: left;
+  padding: 1%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+}
+
+#leftSide p {
+  width: 15%;
+  margin-right: 35%;
+}
+
+#banner #leftSide p:hover {
+  color: #3333B0;
+  cursor: pointer;
+}
+
+#banner #rightSide {
+  text-align: right;
+  color: #236BA2;
+}
+
+#rightSide p {
+  width: 15%;
+  float: right;
+}
+
+#banner #rightSide p:hover {
+  color: #ccc;
+  cursor: pointer;
+}
+
+#mainFrame {
+  width: 100vw;
+  height: 50vw;
+  background-color: #236BA2;
+  padding: 10% 10% 15% 10%;
+}
+
+#mainFrame h1 {
+  text-align: center;
+  font-size: 4.8em;
+  font-family: 'Pacifico', cursive;
+  border-bottom: 2px solid #07416E;
+  padding-bottom: 2%;
+  margin: 0 30%;
+  margin-bottom: 3%;
+  color: white;
+}
+
+#mainFrame h2 {
+  text-align: center;
+}

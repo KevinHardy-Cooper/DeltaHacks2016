@@ -135,7 +135,14 @@ if($username == "") {
           window.location.href = "home.php";
           break;
         case "continueButton":
-        // TODO: Implement to go to next page
+          var toBeHref = "chooseListener.php?";
+          for (var i = 0; i < chosenTags.length; i++) {
+            if(i >= 0) {
+              toBeHref += "&";
+            }
+            toBeHref += "tag" + i + "=" + chosenTags[i];
+          }
+          window.location.href = toBeHref;
           break;
         default:
 
