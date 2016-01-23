@@ -13,9 +13,9 @@
 	$chosenTags = array();									//Loop through this to use in Algo
 	for ($i=0; true; $i++) {
 		$tag = "";
-		$tag = $_GET["tag" + $i];
+		$tag = $_GET["tag" . $i];
 		if($tag != "") {
-			$chosenTags[$i] = $tag;
+			$chosenTags[$i] = "\"" . $tag . "\"";
 		} else {
 			break;
 		}
@@ -90,25 +90,28 @@
 	</div>
 	<i class="fa fa-spinner fa-spin spinner"></i>
 </body>
-
+<?php
+	echo "<script>
+					var tags = [". implode(",",$chosenTags) ."];
+					var user = '" . $username . "';
+	</script>";
+?>
 <script>
-
 $(document).ready(function() {
-	var username = <?php echo '"' . $username .'"';?>;
-	var tags = [
-		<?php
-		$trigger = 1;
-		foreach ($chosenTags as $key) {
-			if(!$trigger) {
-				echo ",";
-			} else {
-				$trigger = 0;
-			}
-			echo '"' + $key + '"';
-
-		}
-		?>
-	];
+	while(typeof tags == 'undefined' && typeof user == 'undefined') {
+		//wait
+	}
+	$.ajax({
+    method: 'get',
+    url: 'php/retrieveListeners.php',
+    data: {
+      'user': user,
+      'tags': tags
+    },
+    success: function(msg) {
+      console.log(msg);
+    }
+  });
 });
 //on doc ready
 	//send username and tags to algo ryth
