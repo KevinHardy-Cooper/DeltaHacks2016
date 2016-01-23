@@ -10,4 +10,11 @@ if (!$con) {
 }
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($result);
+// Message: To access tags, $tags[0]..$tags[sizeof($tags) + 1?];
+// echo like this... <div class"listener col-md-5">
+//   <img src="..." alt="..." />
+//   <p> $Username </p>
+//   <p> $Small Ach </p>
+//   <p> $Stars </p>
+// </div>
  ?>

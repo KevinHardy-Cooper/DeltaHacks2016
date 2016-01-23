@@ -78,15 +78,7 @@
 	</div>
 
 	<div id="listenerContainer">
-		<div class="listener col-md-5">
 
-		</div>
-		<div class="col-md-2">
-
-		</div>
-		<div class="listener col-md-5">
-
-		</div>
 	</div>
 	<i class="fa fa-spinner fa-spin spinner"></i>
 </body>
@@ -99,7 +91,7 @@
 <script>
 $(document).ready(function() {
 	while(typeof tags == 'undefined' && typeof user == 'undefined') {
-		//wait
+		//wait to be initialized...
 	}
 	$.ajax({
     method: 'get',
@@ -110,22 +102,10 @@ $(document).ready(function() {
     },
     success: function(msg) {
       console.log(msg);
+			$("#listenerContainer").append(msg);
     }
   });
 });
-//on doc ready
-	//send username and tags to algo ryth
-	//recieve divs, place in listener container
-	/*ex.
-
-	<div class"listener col-md-5">
-		<img src="..." alt="..." />
-		<p> $Username </p>
-		<p> $Small Ach </p>
-		<p> $Stars </p>
-	</div>
-
-	*/
 </script>
 
 </html>
