@@ -66,6 +66,20 @@
 		</div>
 	</div>
 
+	<div id="fixedHeader">
+		<p>
+			We liked these people enough, we thought you'd like them too.
+		</p>
+	</div>
+
+	<div id="navButtons" class="col-md-1">
+		<div class="navButtonItem"><i class="fa fa-chevron-up"></i></div>
+		<div class="navButtonItem"><i class="fa fa-chevron-down"></i></div>
+	</div>
+
+	<div id="listenerContainer">
+		
+	</div>
 </body>
 
 </html>

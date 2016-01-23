@@ -42,24 +42,45 @@ background-color: #236BA2;
   cursor: pointer;
 }
 
-#mainFrame {
-  width: 100vw;
-  height: 50vw;
-  background-color: #236BA2;
-  padding: 10% 10% 15% 10%;
+#fixedHeader {
+  width: 100%;
+  position: fixed;
+  top: 7vw;
+  margin: 0 auto;
 }
 
-#mainFrame h1 {
+#fixedHeader p {
+  width: 100%;
   text-align: center;
-  font-size: 4.8em;
   font-family: 'Pacifico', cursive;
-  border-bottom: 2px solid #07416E;
-  padding-bottom: 2%;
-  margin: 0 30%;
-  margin-bottom: 3%;
+  font-size: 3em;
+  color: #07416E;
+}
+
+#navButtons {
+  position: fixed;
+  right: 0;
+  top: 45vh;
+}
+
+.navButtonItem {
+  margin-bottom: 5vw;
+  font-size: 2.5em;
   color: white;
 }
 
-#mainFrame h2 {
-  text-align: center;
+.navButtonItem:hover {
+  color: #ccc;
+  cursor: pointer;
+}
+
+#listenerContainer {
+  width: 84%;
+  margin: 0 auto;
+  padding-top: 16vw; 
+  height: 200vh;
+}
+
+.listener {
+    background-color: red;
 }
