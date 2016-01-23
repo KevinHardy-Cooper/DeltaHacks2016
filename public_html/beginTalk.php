@@ -41,7 +41,7 @@ if($username == "") {
       integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
       crossorigin="anonymous">
       </script>
-      <link href="css/beginTalking.css" rel="stylesheet">
+      <link href="css/begintalking.css" rel="stylesheet">
   </head>
 
   <body>

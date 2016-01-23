@@ -92,7 +92,7 @@ $("#login").click(function() {
   console.log(password);
   $.ajax({
     method: 'get',
-    url: 'php/verify.php',
+    url: 'php/verifyUser.php',
     data: {
       'username': username,
       'password': password

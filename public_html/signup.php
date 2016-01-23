@@ -314,7 +314,7 @@ $("#next2").click(function() {
         }, success: function(msg) {
         $.ajax({
           method: 'get',
-          url: 'php/verify.php',
+          url: 'php/verifyUser.php',
           data: {
             'username': email,
             'password': password
@@ -390,7 +390,7 @@ $("#next3").click(function() {
     }, success: function(msg) {
     $.ajax({
       method: 'get',
-      url: 'php/verify.php',
+      url: 'php/verifyUser.php',
       data: {
         'username': email,
         'password': password
