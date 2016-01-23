@@ -2,94 +2,13 @@ body{
 	background-color: #1C68D1 !important;
 }
 
-#scrollableForm {
-	width: 60vw;
-	margin: 0 auto;
-	margin-top: 20vw;
-}
-
-.pageScroll{
-  cursor: hand;
-  cursor: pointer;
-}
-
-.navbar-brand{
-  cursor: hand;
-  cursor: pointer;
-}
-
-.basicForm {
-	margin-bottom: 2vw;
-}
-.addressBlock {
-	margin-bottom: 70px;
-}
-
-#addressCityAndCode {
-	margin-bottom: 115px;
-}
-
-#usernamePicker {
-	height: 10%;
-}
-
-#logo{
-	font-family: 'Lobster', cursive;
-	color: #1C68D1;
-}
-
-#logo-centered{
-	margin: 0 auto;
-	margin-top: 250px;
-	width: 50vw;
-	text-align: center;
-	font-family: 'Lobster', cursive;
-	font-size: 5vw;
-	color: white;
-}
-
-.listen-talk-choice{
-	display: inline-block;
-	width: 32.7%;
-	text-align: center;
-	font-size: 1.75vw;
-	color: white;
-}
-
-#listen-talk-choices{
-	margin: 0 auto;
-	width: 50vw;
-}
-
-#listen-talk-slider{
-	margin: 0 auto;
-	height: 100px;
-	width: 30vw;
-}
-
-#next-button{
-	margin: 0 auto;
-	height: 70px;
-	width: 7vw;
-	text-align: center;
-	font-family: 'Lobster', cursive;
-	line-height: 70px;
-	font-size: 2.1vw;
-	color: #1C68D1;
-	background-color: white;
-	border-radius: 15px;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
-	cursor: pointer;
-}
-
 .a{
 	width: 7vw;
 }
 
 .navbar-default {
     color: #1C68D1;
-    
+
     font-family: 'Lobster', cursive;
     background-color: #fff;
     -webkit-transition: all .35s;
@@ -165,8 +84,3 @@ form input {
   float: left;
   text-align: center;
 }
-
-
-
-
-
