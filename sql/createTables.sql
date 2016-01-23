@@ -1,4 +1,4 @@
-CREATE TABLE `2035081_letstalk`.`Person`(
+CREATE TABLE IF NOT EXISTS `LetsTalk`.`Person`(
 	`Email` VARCHAR(255) NOT NULL,
 	`FirstName` VARCHAR(255) NOT NULL,
 	`LastName` VARCHAR(255) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE `2035081_letstalk`.`Person`(
  	PRIMARY KEY (`Email`)
 ) ENGINE = MyISAM;
 
-CREATE TABLE `2035081_letstalk`.`Listener`(
+CREATE TABLE IF NOT EXISTS `LetsTalk`.`Listener`(
 	`Email` VARCHAR(255) NOT NULL,
 	`ProblemSolver` INT NOT NULL,
 	`ListeningExperience` INT NOT NULL,
@@ -33,19 +33,7 @@ CREATE TABLE `2035081_letstalk`.`Listener`(
 	FOREIGN KEY (`Email`) REFERENCES Person (`Email`)
 ) ENGINE = MyISAM;
 
-CREATE TABLE `2035081_letstalk`.`UserAdjective`(
-	`Adjective` VARCHAR(20) NOT NULL,
-
-	PRIMARY KEY (`Adjective`)
-) ENGINE = MYISAM;
-
-CREATE TABLE `2035081_letstalk`.`UserNoun`(
-	`Noun` VARCHAR(35) NOT NULL,
-
-	PRIMARY KEY (`Noun`)
-) ENGINE = MYISAM;
-
-CREATE TABLE `2035081_letstalk`.`Log`(
+CREATE TABLE IF NOT EXISTS `LetsTalk`.`Log`(
 	`ListenerEmail` VARCHAR(255) NOT NULL,
 	`TalkerEmail` VARCHAR(255) NOT NULL,
 	`SenderEmail` VARCHAR(255) NOT NULL,
@@ -58,4 +46,22 @@ CREATE TABLE `2035081_letstalk`.`Log`(
 	FOREIGN KEY (`ListenerEmail`) REFERENCES Person (`Email`),
 	FOREIGN KEY (`TalkerEmail`) REFERENCES Person (`Email`),
 	PRIMARY KEY (`ListenerEmail`, `TalkerEmail`, `TimeStamp`)
+) ENGINE = MYISAM;
+
+CREATE TABLE IF NOT EXISTS `LetsTalk`.`UserAdjective`(
+	`Adjective` VARCHAR(20) NOT NULL,
+
+	PRIMARY KEY (`Adjective`)
+) ENGINE = MYISAM;
+
+CREATE TABLE IF NOT EXISTS `LetsTalk`.`UserNoun`(
+	`Noun` VARCHAR(35) NOT NULL,
+
+	PRIMARY KEY (`Noun`)
+) ENGINE = MYISAM;
+
+CREATE TABLE IF NOT EXISTS `LetsTalk`.`Topics`(
+	`Topic` VARCHAR(255) NOT NULL,
+
+	PRIMARY KEY (`Topics`)
 ) ENGINE = MYISAM;
