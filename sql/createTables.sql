@@ -63,5 +63,5 @@ CREATE TABLE IF NOT EXISTS `LetsTalk`.`UserNoun`(
 CREATE TABLE IF NOT EXISTS `LetsTalk`.`Topics`(
 	`Topic` VARCHAR(255) NOT NULL,
 
-	PRIMARY KEY (`Topics`)
+	PRIMARY KEY (`Topic`)
 ) ENGINE = MYISAM;

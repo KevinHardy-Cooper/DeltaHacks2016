@@ -146,6 +146,7 @@
             <option value="Frog">Frog</option>
             <option value="Mantis Shrip">Mantis Shrimp</option>
             <option value="Cuttlefish">Cuttlefish</option>
+            <!--TODO: Replace with generated function -->
           </select>
         </div>
       </div>
