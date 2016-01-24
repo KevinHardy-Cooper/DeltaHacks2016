@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `LetsTalk`.`UserNoun`(
 	PRIMARY KEY (`Noun`)
 ) ENGINE = MYISAM;
 
-CREATE TABLE IF NOT EXISTS `LetsTalk`.`Topics`(
+CREATE TABLE IF NOT EXISTS `LetsTalk`.`Topic`(
 	`Topic` VARCHAR(255) NOT NULL,
 
 	PRIMARY KEY (`Topic`)
