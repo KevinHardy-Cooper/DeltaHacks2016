@@ -22,8 +22,6 @@ amiable
 amicable
 amorous
 appreciative
-appreciative
-approachable
 appropriate
 artistic
 assured
@@ -44,8 +42,6 @@ benign
 big-hearted
 blessed
 blissful
-blissful
-bold
 brainy
 brave
 bright
@@ -78,8 +74,6 @@ complex
 conciliatory
 concise
 confident
-confident
-congenial
 considerate
 consistent
 constant
@@ -106,11 +100,7 @@ deliberate
 delightful
 democratic
 dependable
-dependable
-deserving
 desirable
-desirable
-determined
 devote
 dignified
 diligent
@@ -191,8 +181,6 @@ healthy
 heavenly
 heedful
 helpful
-helpful
-heroic
 hilarious
 hopeful
 hospitable
@@ -202,8 +190,6 @@ immaculate
 impartial
 important
 impressive
-impressive
-independent
 industrious
 influential
 ingenious
@@ -269,8 +255,6 @@ powerful
 practical
 pragmatic
 precious
-precious
-priceless
 privileged
 productive
 professional
@@ -322,8 +306,6 @@ sexy
 sharp
 shrewd
 sincere
-sincere
-smooth
 sociable
 soft-spoken
 solid
@@ -354,8 +336,6 @@ swell
 sympathetic
 systematic
 tender
-tender
-terrific
 thankful
 thorough
 thoughtful
@@ -368,10 +348,6 @@ truthful
 understanding
 unique
 upright
-upright
-valiant
-valiant
-versatile
 vigorous
 virtuous
 visionary
