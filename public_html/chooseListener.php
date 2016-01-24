@@ -24,7 +24,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> #Name | Powered by SimplyCoded </title>
+	<title> Time to Talk | Let's Talk</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"

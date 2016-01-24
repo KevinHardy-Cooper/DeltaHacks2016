@@ -4,7 +4,7 @@
 
   <!-- Landing Page for Let's Talk. Purpose: Login, Sign up Link, Warm Welcome and About Us -->
 
-  <title> #Name | Powered by SimplyCoded </title>
+  <title> Let's Talk </title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet"
   href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"

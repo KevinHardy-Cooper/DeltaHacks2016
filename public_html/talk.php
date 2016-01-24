@@ -24,7 +24,7 @@ eg.
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Talk</title>
+    <title>Time to Talk | Let's Talk</title>
 
     <!-- Bootstrap Core CSS -->
 

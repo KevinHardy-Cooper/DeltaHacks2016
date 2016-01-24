@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Chat</title>
+    <title>Chat | Let's Talk</title>
 
     <!-- Bootstrap Core CSS -->
 

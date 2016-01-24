@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Listen</title>
+    <title>Time to Listen | Let's Talk</title>
 
     <!-- Bootstrap Core CSS -->
 
