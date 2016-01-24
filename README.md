@@ -12,8 +12,10 @@ All Source Code:
 * See TO-DOs..
 * Add Better Experience for Mobile Users (CSS)
 
-
 Database Changes:
 * Add Small Ach. Data to prompt new Small Ach's, Change ALL code to match
 * Add Description in Database, length/type currently unknown, Change ALL code to match
 * New sql code created, upload to site.
+
+Choose Topics Page:
+Continue button only appears to be disabled but is still clickable, fix that.
