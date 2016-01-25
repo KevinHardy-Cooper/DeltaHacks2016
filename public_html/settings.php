@@ -63,15 +63,15 @@ $row = mysqli_fetch_assoc($result);
   <div id="editForm">
     <p class="formHeading col-md-12"> Username </p>
     <p class="userData col-md-12"><?php echo $row["UserAdjective"]; echo " "; echo $row["UserNoun"];  ?></p>
-    <p class="formHeading col-md-6" > First Name
-    <p class="formHeading col-md-6" > Last Name
+    <p class="formHeading col-md-6"> First Name
+    <p class="formHeading col-md-6"> Last Name
     <p class="userData col-md-6" data-attrType="fNameEdit"><?php echo $row["FirstName"]; ?></p>
     <p class="userData col-md-6" data-attrType="lNameEdit"><?php echo $row["LastName"]; ?></p>
     <p class="formHeading col-md-12" data-attrType="gender"> Gender <i class="fa fa-pencil"></i></p>
     <p class="userData col-md-12" data-attrType="genderEdit"><?php echo $row["Gender"]; ?></p>
-    <p class="formHeading col-md-12" data-attrType="email"> Email </p> <i class="fa fa-pencil"></i></p>
+    <p class="formHeading col-md-12" data-attrType="email"> Email <i class="fa fa-pencil"></i></p>
     <p class="userData col-md-12" data-attrType="emailEdit"><?php echo $row["Email"]; ?></p>
-    <p class="formHeading col-md-6" data-attrType="aNumber"> Number <i class="fa fa-pencil"></i></p>
+    <p class="formHeading col-md-6 clearBoth" data-attrType="aNumber"> Number <i class="fa fa-pencil"></i></p>
     <p class="formHeading col-md-6" data-attrType="aStreet"> Street <i class="fa fa-pencil"></i></p>
     <p class="userData col-md-6" data-attrType="aNumberEdit"><?php echo $row["StreetNum"]; ?></p>
     <p class="userData col-md-6" data-attrType="aStreetEdit"><?php echo $row["StreetName"]; ?></p>

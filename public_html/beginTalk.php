@@ -141,7 +141,7 @@ if($username == "") {
             if(i >= 0) {
               toBeHref += "&";
             }
-            toBeHref += "tag" + i + "=" + chosenTags[i];
+            toBeHref += "topic" + i + "=" + chosenTags[i];
           }
           window.location.href = toBeHref;
           break;

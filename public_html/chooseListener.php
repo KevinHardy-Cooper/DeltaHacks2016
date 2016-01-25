@@ -10,17 +10,17 @@
 	$result = mysqli_query($con, $sql);
 	$row = mysqli_fetch_assoc($result);
 
-	$chosenTags = array();									//Loop through this to use in Algo
+	$chosenTopics = array();									//Loop through this to use in Algo
 	for ($i=0; true; $i++) {
-		$tag = "";
-		$tag = $_GET["tag" . $i];
-		if($tag != "") {
-			$chosenTags[$i] = "\"" . $tag . "\"";
+		$topic = "";
+		$topic = $_GET["topic" . $i];
+		if($topic != "") {
+			$chosenTopics[$i] = "\"" . $topic . "\"";
 		} else {
 			break;
 		}
 	}
-	if($chosenTags[0] == "") {
+	if($chosenTopics[0] == "") {
 		header ('Location: beginTalk.php');
 	}
 ?>
@@ -87,13 +87,13 @@
 </body>
 <?php
 	echo "<script>
-					var tags = [". implode(",",$chosenTags) ."];
+					var topics = [". implode(",",$chosenTopics) ."];
 					var user = '" . $username . "';
 	</script>";
 ?>
 <script>
 $(document).ready(function() {
-	while(typeof tags == 'undefined' && typeof user == 'undefined') {
+	while(typeof topics == 'undefined' && typeof user == 'undefined') {
 		//wait to be initialized...
 	}
 	$.ajax({
@@ -101,7 +101,7 @@ $(document).ready(function() {
 		url: 'php/retrieveListeners.php',
 		data: {
 			'user': user,
-			'tags': tags
+			'topics': topics
 		},
 		success: function(msg) {
 			console.log(msg);

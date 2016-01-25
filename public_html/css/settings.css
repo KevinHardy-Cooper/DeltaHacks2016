@@ -90,4 +90,9 @@ body {
   margin: 0 10% 2% 0;
 }
 
+/* Used only to deter half width <p> from jumping up to full width <p> going to halfwidth <edit> */
+.clearBoth {
+  clear: both;
+}
+
 /* TODO overwrite :hover for formheadings that arent editable*/
