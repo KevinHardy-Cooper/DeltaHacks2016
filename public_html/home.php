@@ -82,15 +82,14 @@ $(".panel").click(function() {
       window.location.href = "beginTalk.php";
       break;
     case "panel2":
-      //TODO go to listen page
-      alert("Not Implemented");
+      // TODO: Confirm person is a listener, prompt to go to sign up page
+      window.location.href = "listen.php";
       break;
     case "panel3":
       //TODO go to community page
       alert("Not Implemented");
       break;
     case "panel4":
-      //TODO go to settings page
       window.location.href = "settings.php";
       break;
     default:
@@ -110,6 +109,10 @@ $("#rightSide p").click(function() {
       }
     });
   }
+});
+
+$("#leftSide p").click(function() {
+  // TODO: Implement to do SOMETHING
 });
 
 </script>

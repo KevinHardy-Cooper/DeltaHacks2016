@@ -20,6 +20,9 @@
 			break;
 		}
 	}
+	if($chosenTags[0] == "") {
+		header ('Location: beginTalk.php');
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -94,17 +97,25 @@ $(document).ready(function() {
 		//wait to be initialized...
 	}
 	$.ajax({
-    method: 'get',
-    url: 'php/retrieveListeners.php',
-    data: {
-      'user': user,
-      'tags': tags
-    },
-    success: function(msg) {
-      console.log(msg);
+		method: 'get',
+		url: 'php/retrieveListeners.php',
+		data: {
+			'user': user,
+			'tags': tags
+		},
+		success: function(msg) {
+			console.log(msg);
 			$("#listenerContainer").append(msg);
-    }
-  });
+		}
+	});
+});
+
+$("#rightSide p").click(function() {
+	// TODO: Do something check this is clicked
+});
+
+$("#leftSide p").click(function() {
+	window.location.href = "home.php";
 });
 </script>
 

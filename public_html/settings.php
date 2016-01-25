@@ -61,16 +61,16 @@ $row = mysqli_fetch_assoc($result);
   </div>
 
   <div id="editForm">
-    <p class="formHeading"> Username </p>
-    <p class="userData"><?php echo $row["UserAdjective"]; echo " "; echo $row["UserNoun"];  ?></p>
-    <p class="formHeading col-md-6" data-attrType="fName"> First Name <i class="fa fa-pencil"></i> </p>
-    <p class="formHeading col-md-6" data-attrType="lName"> Last Name <i class="fa fa-pencil"></i></p>
+    <p class="formHeading col-md-12"> Username </p>
+    <p class="userData col-md-12"><?php echo $row["UserAdjective"]; echo " "; echo $row["UserNoun"];  ?></p>
+    <p class="formHeading col-md-6" > First Name
+    <p class="formHeading col-md-6" > Last Name
     <p class="userData col-md-6" data-attrType="fNameEdit"><?php echo $row["FirstName"]; ?></p>
     <p class="userData col-md-6" data-attrType="lNameEdit"><?php echo $row["LastName"]; ?></p>
-    <p class="formHeading" data-attrType="gender"> Gender <i class="fa fa-pencil"></i></p>
-    <p class="userData" data-attrType="genderEdit"><?php echo $row["Gender"]; ?></p>
-    <p class="formHeading"> Email </p>
-    <p class="userData"><?php echo $row["Email"]; ?></p>
+    <p class="formHeading col-md-12" data-attrType="gender"> Gender <i class="fa fa-pencil"></i></p>
+    <p class="userData col-md-12" data-attrType="genderEdit"><?php echo $row["Gender"]; ?></p>
+    <p class="formHeading col-md-12" data-attrType="email"> Email </p> <i class="fa fa-pencil"></i></p>
+    <p class="userData col-md-12" data-attrType="emailEdit"><?php echo $row["Email"]; ?></p>
     <p class="formHeading col-md-6" data-attrType="aNumber"> Number <i class="fa fa-pencil"></i></p>
     <p class="formHeading col-md-6" data-attrType="aStreet"> Street <i class="fa fa-pencil"></i></p>
     <p class="userData col-md-6" data-attrType="aNumberEdit"><?php echo $row["StreetNum"]; ?></p>
@@ -83,8 +83,8 @@ $row = mysqli_fetch_assoc($result);
     <p class="formHeading col-md-6" data-attrType="aCountry"> Country <i class="fa fa-pencil"></i></p>
     <p class="userData col-md-6" data-attrType="aPostalEdit"><?php echo $row["PostalCode"]; ?></p>
     <p class="userData col-md-6" data-attrType="aCountryEdit"><?php echo $row["Country"]; ?></p>
-    <p class="formHeading" data-attrType="smallAch"> Your Small Achievement of the Day <i class="fa fa-pencil"></i></p>
-    <p class="userData" data-attrType="smallAchEdit"><?php echo $row["SmallAchievement"]; ?></p>
+    <p class="formHeading col-md-12" data-attrType="smallAch"> Your Small Achievement of the Day <i class="fa fa-pencil"></i></p>
+    <p class="userData col-md-12" data-attrType="smallAchEdit"><?php echo $row["SmallAchievement"]; ?></p>
 
     <button id="becomeListen" class="btn btn-info">Become a Listener </button>
     <div id="saveButtonRow">

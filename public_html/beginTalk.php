@@ -62,7 +62,7 @@ if($username == "") {
       </div>
       <?php // TODO: Add "Just Talk Button w/ JS " ?>
       <button id="cancelButton" class="btn btn-warning dirButtons"><i class="fa fa-chevron-left"></i> Cancel </button>
-      <button id="continueButton" class="btn disabled dirButtons"> Continue <i class="fa fa-chevron-right"></i> </button>
+      <button id="continueButton" class="btn disabled dirButtons" disabled="true"> Continue <i class="fa fa-chevron-right"></i> </button>
     </div>
   </body>
 
@@ -121,6 +121,7 @@ if($username == "") {
         $('#autoFillInput').val("");
         $("#topicDisplay").append(throwAwayDiv);
         $("#continueButton").removeClass("disabled");
+        $("#continueButton").removeAttr('disabled');
         $("#continueButton").addClass("btn-success");
       } else {
         // TODO: Notify Users that tag is unavailable
@@ -147,6 +148,14 @@ if($username == "") {
         default:
 
       }
+    });
+
+    $("#rightSide p").click(function() {
+      // TODO: Do something check this is clicked
+    });
+
+    $("#leftSide p").click(function() {
+      window.location.href = "home.php";
     });
 
   </script>
